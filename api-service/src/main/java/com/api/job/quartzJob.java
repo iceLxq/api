@@ -30,9 +30,9 @@ public class quartzJob {
     /**
      * 定时获取同步证券代码
      * */
-    @Scheduled(cron = "5 25 18 * * ?")
+    @Scheduled(cron = "30 4 16 * * ?")
     public void syncSecuritiesCode(){
-        String url = "https://xueqiu.com/service/v5/stock/screener/quote/list?size=2&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz&_=1564279775146&page=1";
+        String url = "https://xueqiu.com/service/v5/stock/screener/quote/list?size=5000&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz&_=1564279775146&page=1";
         Map<String,Object> param =  new HashMap<>();
         HttpHeaders header = new HttpHeaders();
         SnowResult snowResult = restTemplate.getForObject(url, SnowResult.class, param);
