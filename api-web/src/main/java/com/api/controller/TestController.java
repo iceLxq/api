@@ -20,4 +20,9 @@ public class TestController {
         return userService.getUserName();
     }
 
+    @GetMapping("/test")
+    public String test(){
+        return "success";
+    }
+
 }
