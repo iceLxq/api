@@ -32,7 +32,6 @@ public class ShareService {
        return  shareMapper.getShareByRecord(record);
     }
 
-
     public Map daySelect(){
         String url = "https://xueqiu.com/service/v5/stock/screener/quote/list?size=5000&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz&_=1564279775146&page=1";
         Map<String,Object> param =  new HashMap<>();

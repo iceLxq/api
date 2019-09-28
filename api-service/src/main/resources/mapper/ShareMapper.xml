@@ -179,6 +179,5 @@
   <select id="getShareByRecord" parameterType="Object" resultMap="BaseResultMap">
       select * from share
     where symbol = #{symbol} and current = #{current}  and percent = #{percent}
-    and volume = #{volume} and amount =#{amount} and turnover_rate = #{turnoverRate}
   </select>
 </mapper>

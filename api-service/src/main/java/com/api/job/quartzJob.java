@@ -4,6 +4,8 @@ import com.api.domain.share.Share;
 import com.api.domain.snowResult.SnowResult;
 import com.api.service.shareServcie.ShareService;
 import com.api.util.DateUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -22,6 +24,8 @@ import java.util.Map;
 @Component
 public class quartzJob {
 
+    private static Logger logger = LoggerFactory.getLogger(quartzJob.class);
+
     @Autowired
     private RestTemplate restTemplate;
     @Autowired
@@ -31,10 +35,8 @@ public class quartzJob {
      * 定时获取同步证券代码
      * */
     @Scheduled(cron = "30 4 16 * * ?")
-    public void syncSecuritiesCode(){
-        String url = "https://xueqiu.com/service/v5/stock/screener/quote/list?size=5000&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz&_=1564279775146&page=1";
+    public void syncSecuritiesCode(){String url = "https://xueqiu.com/service/v5/stock/screener/quote/list?size=5000&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz&_=1564279775146&page=1";
         Map<String,Object> param =  new HashMap<>();
-        HttpHeaders header = new HttpHeaders();
         SnowResult snowResult = restTemplate.getForObject(url, SnowResult.class, param);
         List<Share> list = snowResult.getData().getList();
         if(!checkExist(list.get(0)) && !checkExist(list.get(1))){ //休市
@@ -49,6 +51,16 @@ public class quartzJob {
     private Boolean checkExist(Share share) {
         List<Share> records = shareService.getShareByRecord(share);
         return records.isEmpty();
+    }
+
+    @Scheduled(cron = "30 * * * * ?")
+    public void test(){
+        Share share = new Share();
+        share.setSymbol("SZ300792");
+        share.setCurrent(55.15);
+        share.setPercent(43.99);
+        shareService.getShareByRecord(share);
+        logger.info("定时任务执行中");
     }
 
 
