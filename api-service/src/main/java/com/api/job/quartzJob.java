@@ -31,21 +31,35 @@ public class quartzJob {
     @Autowired
     private ShareService shareService;
 
+    private static int retry = 0;
+
     /**
      * 定时获取同步证券代码
-     * */
+     */
     @Scheduled(cron = "30 4 16 * * ?")
-    public void syncSecuritiesCode(){String url = "https://xueqiu.com/service/v5/stock/screener/quote/list?size=5000&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz&_=1564279775146&page=1";
-        Map<String,Object> param =  new HashMap<>();
+    public void syncSecuritiesCode() {
+        String url = "https://xueqiu.com/service/v5/stock/screener/quote/list?size=5000&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz&_=1564279775146&page=1";
+        Map<String, Object> param = new HashMap<>();
         SnowResult snowResult = restTemplate.getForObject(url, SnowResult.class, param);
         List<Share> list = snowResult.getData().getList();
-        if(!checkExist(list.get(0)) && !checkExist(list.get(1))){ //休市
-            return ;
-        }
+        try {
+            if (!checkExist(list.get(0)) && !checkExist(list.get(1))) { //休市
+                return;
+            }
 
-        Date time = DateUtil.getDay();
-        list.forEach(share -> share.setDate(time));
-        shareService.batchInsert(list);
+            Date time = DateUtil.getDay();
+            list.forEach(share -> share.setDate(time));
+            shareService.batchInsert(list);
+        } catch (Exception e) {
+            logger.info(e.getMessage());
+            logger.info("------------------");
+            logger.info(e.toString());
+            if (retry == 3) {
+                return ;
+            }
+            retry++;
+            syncSecuritiesCode();
+        }
     }
 
     private Boolean checkExist(Share share) {
@@ -53,13 +67,8 @@ public class quartzJob {
         return records.isEmpty();
     }
 
-    @Scheduled(cron = "30 * * * * ?")
-    public void test(){
-        Share share = new Share();
-        share.setSymbol("SZ300792");
-        share.setCurrent(55.15);
-        share.setPercent(43.99);
-        shareService.getShareByRecord(share);
+    @Scheduled(cron = "* 30 * * * ?")
+    public void test() {
         logger.info("定时任务执行中");
     }
 
