@@ -58,6 +58,11 @@ public class quartzJob {
                 return ;
             }
             retry++;
+            try {
+                Thread.sleep(600000);
+            } catch (InterruptedException e1) {
+                e1.printStackTrace();
+            }
             syncSecuritiesCode();
         }
     }
