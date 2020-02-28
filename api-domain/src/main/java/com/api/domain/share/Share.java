@@ -15,9 +15,9 @@ public class Share {
 
     private Double percent;
 
-    private Double volume;
+    private Long volume;
 
-    private Double amount;
+    private Long amount;
 
     private Double turnoverRate;
 
@@ -65,6 +65,9 @@ public class Share {
     }
 
     public String getSymbol() {
+        if (symbol.startsWith("SZ") || symbol.startsWith("SH")){
+            symbol = symbol.substring(2);
+        }
         return symbol;
     }
 
@@ -96,19 +99,19 @@ public class Share {
         this.percent = percent;
     }
 
-    public Double getVolume() {
+    public Long getVolume() {
         return volume;
     }
 
-    public void setVolume(Double volume) {
+    public void setVolume(Long volume) {
         this.volume = volume;
     }
 
-    public Double getAmount() {
+    public Long getAmount() {
         return amount;
     }
 
-    public void setAmount(Double amount) {
+    public void setAmount(Long amount) {
         this.amount = amount;
     }
 

@@ -3,6 +3,7 @@ package com.api.dao.mapper.securityCode;
 import com.api.domain.securityCode.SecurityCode;
 
 public interface SecurityCodeMapper {
+
     int deleteByPrimaryKey(String uuid);
 
     int insert(SecurityCode record);

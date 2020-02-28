@@ -2,6 +2,8 @@ package com.api.job;
 
 import com.api.domain.share.Share;
 import com.api.domain.snowResult.SnowResult;
+import com.api.service.DayfollowService;
+import com.api.service.daylyService.DaylyService;
 import com.api.service.shareServcie.ShareService;
 import com.api.util.DateUtil;
 import org.slf4j.Logger;
@@ -22,14 +24,16 @@ import java.util.Map;
  */
 
 @Component
-public class quartzJob {
+public class QuartzJob {
 
-    private static Logger logger = LoggerFactory.getLogger(quartzJob.class);
+    private static Logger logger = LoggerFactory.getLogger(QuartzJob.class);
 
     @Autowired
     private RestTemplate restTemplate;
     @Autowired
     private ShareService shareService;
+    @Autowired
+    private DaylyService daylyService;
 
     private static int retry = 0;
 
@@ -48,8 +52,12 @@ public class quartzJob {
             }
 
             Date time = DateUtil.getDay();
-            list.forEach(share -> share.setDate(time));
+            list.forEach(share -> {
+                share.setDate(time);
+                share.setSymbol(share.getSymbol().substring(2));
+            });
             shareService.batchInsert(list);
+            retry = 0;
         } catch (Exception e) {
             logger.info(e.getMessage());
             logger.info("------------------");
@@ -72,10 +80,23 @@ public class quartzJob {
         return records.isEmpty();
     }
 
+
+
+    /**
+     * 成交量放大个股
+     */
+    @Scheduled(cron = "* 0/5 9,15 * * ?")
+    public void cacheDayFollow() {
+        daylyService.cacheDayFollow();
+    }
+
     @Scheduled(cron = "* 30 * * * ?")
     public void test() {
         logger.info("定时任务执行中");
     }
 
+
+    public static void main(String[] args) {
+    }
 
 }

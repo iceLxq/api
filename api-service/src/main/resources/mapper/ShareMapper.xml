@@ -180,4 +180,16 @@
       select * from share
     where symbol = #{symbol} and current = #{current}  and percent = #{percent}
   </select>
+
+  <select id="getMaxId" resultMap="BaseResultMap">
+    select * from `share` order by id desc limit 1
+  </select>
+
+  <select id="getShareByDate" parameterType="Object"  resultMap="BaseResultMap">
+    select * from `share` where date = #{date}
+  </select>
+
+  <select id="getshareLimit2ByDate"  resultMap="BaseResultMap">
+    SELECT * FROM `share` where symbol='300033' order by date desc limit 2;
+  </select>
 </mapper>

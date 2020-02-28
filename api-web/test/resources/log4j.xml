@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+
+
+    <jmxConfigurator />
+
+    <appender name="ROLLINGFILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy
+                class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!--日志文件输出的文件名 -->
+            <fileNamePattern>${catalina.home}/logs/api-9038_%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <!--文件最多保留的天数 -->
+            <maxHistory>7</maxHistory>
+            <!--文件最大为多少 -->
+            <maxFileSize>150MB</maxFileSize>
+        </rollingPolicy>
+        <encoder>
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符 -->
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread]%logger{56}.%method:%L -%msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread]%logger{56}.%method:%L -%msg%n
+            </pattern>
+        </encoder>
+    </appender>
+    <logger name="org.springframework.web.method.support.InvocableHandlerMethod"
+            level="TRACE" />
+
+    <logger name="com.api.dao.mapper" level="info"
+            additivity="false">
+        <appender-ref ref="Console" />
+        <appender-ref ref="ROLLINGFILE" />
+    </logger>
+
+    <logger name="com.api" level="info" additivity="false">
+        <appender-ref ref="Console" />
+        <appender-ref ref="ROLLINGFILE" />
+    </logger>
+
+    <root  level="info">
+        <appender-ref ref="Console" />
+        <appender-ref ref="ROLLINGFILE" />
+    </root>
+
+</configuration>

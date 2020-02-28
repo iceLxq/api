@@ -50,7 +50,7 @@
         </javaClientGenerator>
 
         <!--生成对应表及类名 -->
-        <table tableName="dayFollow" enableCountByExample="false"
+        <table tableName="share" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false">
         </table>

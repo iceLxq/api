@@ -8,6 +8,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,6 +40,18 @@ public class ShareService {
         List<Share> list = snowResult.getData().getList();
         List<Share> collect = list.stream().filter(share -> share.getPercent() > 0.1).collect(Collectors.toList());
         return null;
+    }
+
+    public Share getMaxId() {
+        return shareMapper.getMaxId();
+    }
+
+    public List<Share> getShareByDate(Date date) {
+        return shareMapper.getShareByDate(date);
+    }
+
+    public List<Share> getShareLimit2ByDate() {
+        return shareMapper.getshareLimit2ByDate();
     }
 
 }

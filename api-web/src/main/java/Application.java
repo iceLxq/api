@@ -24,17 +24,17 @@ import java.io.Serializable;
 @EnableScheduling
 @ComponentScan("com.api")
 @MapperScan("com.api.dao.mapper")
-public class ApiApplication  extends SpringBootServletInitializer{
-	private static Logger logger = LoggerFactory.getLogger(ApiApplication.class);
+public class Application  extends SpringBootServletInitializer{
+	private static Logger logger = LoggerFactory.getLogger(Application.class);
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(ApiApplication.class, args);
+		ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
 		logger.info("项目启动成功");
 	}
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(ApiApplication.class);
+		return builder.sources(Application.class);
 	}
 
 
