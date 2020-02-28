@@ -4,6 +4,7 @@ package com.api.dao.mapper.share;
 import com.api.domain.share.Share;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.Date;
 import java.util.List;
 
 @Mapper
@@ -23,4 +24,10 @@ public interface ShareMapper {
     void batchInsert(List<Share> list);
 
     List<Share> getShareByRecord(Share record);
+
+    Share getMaxId();
+
+    List<Share> getShareByDate(Date date);
+
+    List<Share> getshareLimit2ByDate();
 }
