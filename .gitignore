@@ -6,3 +6,5 @@
 *.iml
 .idea/*
 .idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml
+*.log
+

@@ -54,7 +54,7 @@ public class QuartzJob {
             Date time = DateUtil.getDay();
             list.forEach(share -> {
                 share.setDate(time);
-                share.setSymbol(share.getSymbol().substring(2));
+                share.setSymbol(share.getSymbol());
             });
             shareService.batchInsert(list);
             retry = 0;

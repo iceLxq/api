@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.api.dao.mapper.share.ShareMapper" >
+  <resultMap id="BaseResultMap" type="com.api.domain.share.Share" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="symbol" property="symbol" jdbcType="VARCHAR" />
+    <result column="current" property="current" jdbcType="DOUBLE" />
+    <result column="start_price" property="startPrice" jdbcType="DOUBLE" />
+    <result column="percent" property="percent" jdbcType="DOUBLE" />
+    <result column="volume" property="volume" jdbcType="DOUBLE" />
+    <result column="amount" property="amount" jdbcType="DOUBLE" />
+    <result column="turnover_rate" property="turnoverRate" jdbcType="DOUBLE" />
+    <result column="market_capital" property="marketCapital" jdbcType="DOUBLE" />
+    <result column="date" property="date" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, symbol, current, start_price, percent, volume, amount, turnover_rate, market_capital, 
+    date
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from share
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from share
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.api.domain.share.Share" >
+    insert into share (id, name, symbol, 
+      current, start_price, percent, 
+      volume, amount, turnover_rate, 
+      market_capital, date)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{symbol,jdbcType=VARCHAR}, 
+      #{current,jdbcType=DOUBLE}, #{startPrice,jdbcType=DOUBLE}, #{percent,jdbcType=DOUBLE}, 
+      #{volume,jdbcType=DOUBLE}, #{amount,jdbcType=DOUBLE}, #{turnoverRate,jdbcType=DOUBLE}, 
+      #{marketCapital,jdbcType=DOUBLE}, #{date,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.api.domain.share.Share" >
+    insert into share
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="symbol != null" >
+        symbol,
+      </if>
+      <if test="current != null" >
+        current,
+      </if>
+      <if test="startPrice != null" >
+        start_price,
+      </if>
+      <if test="percent != null" >
+        percent,
+      </if>
+      <if test="volume != null" >
+        volume,
+      </if>
+      <if test="amount != null" >
+        amount,
+      </if>
+      <if test="turnoverRate != null" >
+        turnover_rate,
+      </if>
+      <if test="marketCapital != null" >
+        market_capital,
+      </if>
+      <if test="date != null" >
+        date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="symbol != null" >
+        #{symbol,jdbcType=VARCHAR},
+      </if>
+      <if test="current != null" >
+        #{current,jdbcType=DOUBLE},
+      </if>
+      <if test="startPrice != null" >
+        #{startPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="percent != null" >
+        #{percent,jdbcType=DOUBLE},
+      </if>
+      <if test="volume != null" >
+        #{volume,jdbcType=DOUBLE},
+      </if>
+      <if test="amount != null" >
+        #{amount,jdbcType=DOUBLE},
+      </if>
+      <if test="turnoverRate != null" >
+        #{turnoverRate,jdbcType=DOUBLE},
+      </if>
+      <if test="marketCapital != null" >
+        #{marketCapital,jdbcType=DOUBLE},
+      </if>
+      <if test="date != null" >
+        #{date,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.api.domain.share.Share" >
+    update share
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="symbol != null" >
+        symbol = #{symbol,jdbcType=VARCHAR},
+      </if>
+      <if test="current != null" >
+        current = #{current,jdbcType=DOUBLE},
+      </if>
+      <if test="startPrice != null" >
+        start_price = #{startPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="percent != null" >
+        percent = #{percent,jdbcType=DOUBLE},
+      </if>
+      <if test="volume != null" >
+        volume = #{volume,jdbcType=DOUBLE},
+      </if>
+      <if test="amount != null" >
+        amount = #{amount,jdbcType=DOUBLE},
+      </if>
+      <if test="turnoverRate != null" >
+        turnover_rate = #{turnoverRate,jdbcType=DOUBLE},
+      </if>
+      <if test="marketCapital != null" >
+        market_capital = #{marketCapital,jdbcType=DOUBLE},
+      </if>
+      <if test="date != null" >
+        date = #{date,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.api.domain.share.Share" >
+    update share
+    set name = #{name,jdbcType=VARCHAR},
+      symbol = #{symbol,jdbcType=VARCHAR},
+      current = #{current,jdbcType=DOUBLE},
+      start_price = #{startPrice,jdbcType=DOUBLE},
+      percent = #{percent,jdbcType=DOUBLE},
+      volume = #{volume,jdbcType=DOUBLE},
+      amount = #{amount,jdbcType=DOUBLE},
+      turnover_rate = #{turnoverRate,jdbcType=DOUBLE},
+      market_capital = #{marketCapital,jdbcType=DOUBLE},
+      date = #{date,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <insert id="batchInsert" parameterType="Object">
+    insert into share (id, name, symbol,
+      current, start_price, percent,
+      volume, amount, turnover_rate,
+      market_capital, date)
+    values
+    <foreach collection="list" item="item" index="index" separator=",">
+      (#{item.id,jdbcType=INTEGER}, #{item.name,jdbcType=VARCHAR}, #{item.symbol,jdbcType=VARCHAR},
+      #{item.current,jdbcType=DOUBLE}, #{item.startPrice,jdbcType=DOUBLE}, #{item.percent,jdbcType=DOUBLE},
+      #{item.volume,jdbcType=DOUBLE}, #{item.amount,jdbcType=DOUBLE}, #{item.turnoverRate,jdbcType=DOUBLE},
+      #{item.marketCapital,jdbcType=DOUBLE}, #{item.date,jdbcType=TIMESTAMP})
+    </foreach>
+  </insert>
+
+  <select id="getShareByRecord" parameterType="Object" resultMap="BaseResultMap">
+      select * from share
+    where symbol = #{symbol} and current = #{current}  and percent = #{percent}
+  </select>
+
+  <select id="getMaxId" resultMap="BaseResultMap">
+    select * from `share` order by id desc limit 1
+  </select>
+
+  <select id="getShareByDate" parameterType="Object"  resultMap="BaseResultMap">
+    select * from `share` where date = #{date}
+  </select>
+
+  <select id="getshareLimit2ByDate"  resultMap="BaseResultMap">
+    SELECT * FROM `share` where symbol='300033' order by date desc limit 2;
+  </select>
+</mapper>
