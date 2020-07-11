@@ -1,21 +1,20 @@
 package com.api.domain.snowResult;
 
 /**
- * Created by 李显琪 on 2019/7/28.
+ * Created by 李显琪 on 2020/7/5.
  */
-public class SnowResult {
-
-    private ShareResponse data;
+public class LhbResult {
+    private LhbResponse data;
 
     private String error_code;
 
     private String error_description;
 
-    public ShareResponse getData() {
+    public LhbResponse getData() {
         return data;
     }
 
-    public void setData(ShareResponse data) {
+    public void setData(LhbResponse data) {
         this.data = data;
     }
 
@@ -34,7 +33,4 @@ public class SnowResult {
     public void setError_description(String error_description) {
         this.error_description = error_description;
     }
-
 }
-
-

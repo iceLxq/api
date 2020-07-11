@@ -1,23 +1,23 @@
 package com.api.job;
 
+import com.api.domain.Lhb;
 import com.api.domain.share.Share;
+import com.api.domain.snowResult.LhbResponse;
+import com.api.domain.snowResult.LhbResult;
 import com.api.domain.snowResult.SnowResult;
-import com.api.service.DayfollowService;
+import com.api.service.LhbService;
 import com.api.service.daylyService.DaylyService;
 import com.api.service.shareServcie.ShareService;
 import com.api.util.DateUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by 李显琪 on 2019/3/23.
@@ -34,6 +34,8 @@ public class QuartzJob {
     private ShareService shareService;
     @Autowired
     private DaylyService daylyService;
+    @Autowired
+    private LhbService lhbService;
 
     private static int retry = 0;
 
@@ -63,7 +65,7 @@ public class QuartzJob {
             logger.info("------------------");
             logger.info(e.toString());
             if (retry == 3) {
-                return ;
+                return;
             }
             retry++;
             try {
@@ -81,7 +83,6 @@ public class QuartzJob {
     }
 
 
-
     /**
      * 成交量放大个股
      */
@@ -89,6 +90,54 @@ public class QuartzJob {
     public void cacheDayFollow() {
         daylyService.cacheDayFollow();
     }
+
+
+    /**
+     * 定时同步龙虎榜数据
+     */
+    @Scheduled(cron = "30 4 16 * * ?")
+    public void syncLHBData() {
+        Date createDate = DateUtil.getDay();
+        Long date = createDate.getTime();
+        String url = String.format("https://xueqiu.com/service/v5/stock/hq/longhu?date=%s", date);
+        Map<String, Object> param = new HashMap<>();
+        LhbResult result = restTemplate.getForObject(url, LhbResult.class, param);
+        LhbResponse data = result.getData();
+        try {
+            if (data.getItems().isEmpty()) { //休市
+                logger.info(String.format("cant not get lhb data,date is ", DateUtil.getDay()));
+                return;
+            }
+            Long finalDate = date;
+            List<Lhb> lhbList = new ArrayList<>();
+            data.getItems().forEach(lhb -> {
+                        Lhb record = new Lhb();
+                        BeanUtils.copyProperties(lhb, record);
+                        record.setDescription(String.format("https://xueqiu.com/snowman/S/%s/detail#/LHB?date=%s", lhb.getSymbol(), finalDate.toString()));
+                        record.setDate(createDate);
+                        lhbList.add(record);
+
+                    }
+            );
+            lhbService.batchInsert(lhbList);
+            retry = 0;
+        } catch (Exception e) {
+//            logger.info(e.getMessage());
+//            logger.info("------------------");
+//            logger.info(e.toString());
+//            if (retry == 3) {
+//                return;
+//            }
+//            retry++;
+//            try {
+//                Thread.sleep(6000);
+//            } catch (InterruptedException e1) {
+//                e1.printStackTrace();
+//            }
+//            syncSecuritiesCode();
+        }
+    }
+
 
     @Scheduled(cron = "* 30 * * * ?")
     public void test() {

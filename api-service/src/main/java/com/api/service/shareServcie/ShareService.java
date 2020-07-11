@@ -4,7 +4,6 @@ import com.api.dao.mapper.share.ShareMapper;
 import com.api.domain.share.Share;
 import com.api.domain.snowResult.SnowResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
