@@ -3,6 +3,7 @@ package com.api.dao.mapper.share;
 
 import com.api.domain.share.Share;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.Date;
 import java.util.List;
@@ -29,5 +30,7 @@ public interface ShareMapper {
 
     List<Share> getShareByDate(Date date);
 
-    List<Share> getshareLimit2ByDate();
+    List<Share> getShareLimit2ByDate(String symbol);
+
+    Double getMaCurrentTotal(@Param("symbol")String symbol, @Param("ma") int ma);
 }

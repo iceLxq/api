@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.api.domain.LhbInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.api.domain.LhbInfo" >
+    <result column="seq" property="seq" jdbcType="INTEGER" />
+    <result column="td_date" property="tdDate" jdbcType="TIMESTAMP" />
+    <result column="rank_type" property="rankType" jdbcType="TINYINT" />
+    <result column="trans_amt" property="transAmt" jdbcType="DOUBLE" />
+    <result column="info_type_name" property="infoTypeName" jdbcType="VARCHAR" />
+    <result column="buy_total" property="buyTotal" jdbcType="DOUBLE" />
+    <result column="sell_total" property="sellTotal" jdbcType="DOUBLE" />
+    <result column="chg" property="chg" jdbcType="DOUBLE" />
+    <result column="net_buy" property="netBuy" jdbcType="DOUBLE" />
+    <result column="ratio_total" property="ratioTotal" jdbcType="DOUBLE" />
+    <result column="total_in" property="totalIn" jdbcType="DOUBLE" />
+    <result column="total_out" property="totalOut" jdbcType="DOUBLE" />
+    <result column="code_taglet" property="codeTaglet" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.api.domain.LhbInfo" >
+    insert into lhb_info (seq, td_date, rank_type, 
+      trans_amt, info_type_name, buy_total, 
+      sell_total, chg, net_buy, 
+      ratio_total, total_in, total_out, 
+      code_taglet)
+    values (#{seq,jdbcType=INTEGER}, #{tdDate,jdbcType=TIMESTAMP}, #{rankType,jdbcType=TINYINT}, 
+      #{transAmt,jdbcType=DOUBLE}, #{infoTypeName,jdbcType=VARCHAR}, #{buyTotal,jdbcType=DOUBLE}, 
+      #{sellTotal,jdbcType=DOUBLE}, #{chg,jdbcType=DOUBLE}, #{netBuy,jdbcType=DOUBLE}, 
+      #{ratioTotal,jdbcType=DOUBLE}, #{totalIn,jdbcType=DOUBLE}, #{totalOut,jdbcType=DOUBLE}, 
+      #{codeTaglet,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.api.domain.LhbInfo" >
+    insert into lhb_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="seq != null" >
+        seq,
+      </if>
+      <if test="tdDate != null" >
+        td_date,
+      </if>
+      <if test="rankType != null" >
+        rank_type,
+      </if>
+      <if test="transAmt != null" >
+        trans_amt,
+      </if>
+      <if test="infoTypeName != null" >
+        info_type_name,
+      </if>
+      <if test="buyTotal != null" >
+        buy_total,
+      </if>
+      <if test="sellTotal != null" >
+        sell_total,
+      </if>
+      <if test="chg != null" >
+        chg,
+      </if>
+      <if test="netBuy != null" >
+        net_buy,
+      </if>
+      <if test="ratioTotal != null" >
+        ratio_total,
+      </if>
+      <if test="totalIn != null" >
+        total_in,
+      </if>
+      <if test="totalOut != null" >
+        total_out,
+      </if>
+      <if test="codeTaglet != null" >
+        code_taglet,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="seq != null" >
+        #{seq,jdbcType=INTEGER},
+      </if>
+      <if test="tdDate != null" >
+        #{tdDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="rankType != null" >
+        #{rankType,jdbcType=TINYINT},
+      </if>
+      <if test="transAmt != null" >
+        #{transAmt,jdbcType=DOUBLE},
+      </if>
+      <if test="infoTypeName != null" >
+        #{infoTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="buyTotal != null" >
+        #{buyTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="sellTotal != null" >
+        #{sellTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="chg != null" >
+        #{chg,jdbcType=DOUBLE},
+      </if>
+      <if test="netBuy != null" >
+        #{netBuy,jdbcType=DOUBLE},
+      </if>
+      <if test="ratioTotal != null" >
+        #{ratioTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="totalIn != null" >
+        #{totalIn,jdbcType=DOUBLE},
+      </if>
+      <if test="totalOut != null" >
+        #{totalOut,jdbcType=DOUBLE},
+      </if>
+      <if test="codeTaglet != null" >
+        #{codeTaglet,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

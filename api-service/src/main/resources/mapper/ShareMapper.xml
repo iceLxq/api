@@ -189,7 +189,12 @@
     select * from `share` where date = #{date}
   </select>
 
-  <select id="getshareLimit2ByDate"  resultMap="BaseResultMap">
-    SELECT * FROM `share` where symbol='300033' order by date desc limit 2;
+  <select id="getShareLimit2ByDate" parameterType="Object"  resultMap="BaseResultMap">
+    SELECT * FROM `share` where symbol=#{symbol} order by date desc limit 2;
+  </select>
+
+  <select id="getMaCurrentTotal"  resultType="double">
+    SELECT SUM(t.current)  from
+    (select * FROM share WHERE symbol = #{symbol} and date &lt; now()  ORDER BY date DESC LIMIT #{ma}) t;
   </select>
 </mapper>

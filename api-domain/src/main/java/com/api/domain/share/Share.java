@@ -9,6 +9,8 @@ public class Share {
 
     private String symbol;
 
+    private String symbolCode;
+
     private Double current;
 
     private Double startPrice;
@@ -35,7 +37,7 @@ public class Share {
 
     public void setTurnover_rate(Double turnover_rate) {
         this.turnover_rate = turnover_rate;
-        this.turnoverRate =turnover_rate;
+        this.turnoverRate = turnover_rate;
     }
 
     public Double getMarket_capital() {
@@ -65,13 +67,22 @@ public class Share {
     }
 
     public String getSymbol() {
-        if (symbol.startsWith("SZ") || symbol.startsWith("SH")){
+        if (symbol.startsWith("SZ") || symbol.startsWith("SH")) {
             symbol = symbol.substring(2);
         }
         return symbol;
     }
 
+    public String getSymbolCode() {
+        return symbolCode;
+    }
+
+    public void setSymbolCode(String symbolCode) {
+        this.symbolCode = symbolCode;
+    }
+
     public void setSymbol(String symbol) {
+        this.symbolCode = symbol;
         this.symbol = symbol == null ? null : symbol.trim();
     }
 

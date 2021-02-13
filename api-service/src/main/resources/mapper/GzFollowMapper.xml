@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.api.dao.mapper.GzFollowMapper">
+    <resultMap id="BaseResultMap" type="com.api.domain.bean.GzFollow">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="symbol" property="symbol" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="industry" property="industry" jdbcType="VARCHAR"/>
+        <result column="date" property="date" jdbcType="TIMESTAMP"/>
+        <result column="desc" property="desc" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, symbol, name, industry, date, desc
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from gz_follow
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from gz_follow
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com.api.domain.bean.GzFollow">
+    insert into gz_follow (id, symbol, name, 
+      industry, date, desc
+      )
+    values (#{id,jdbcType=BIGINT}, #{symbol,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{industry,jdbcType=VARCHAR}, #{date,jdbcType=TIMESTAMP}, #{desc,jdbcType=VARCHAR}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.api.domain.bean.GzFollow">
+        insert into gz_follow
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="symbol != null">
+                symbol,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="industry != null">
+                industry,
+            </if>
+            <if test="date != null">
+                date,
+            </if>
+            <if test="desc != null">
+                desc,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="symbol != null">
+                #{symbol,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="industry != null">
+                #{industry,jdbcType=VARCHAR},
+            </if>
+            <if test="date != null">
+                #{date,jdbcType=TIMESTAMP},
+            </if>
+            <if test="desc != null">
+                #{desc,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.api.domain.bean.GzFollow">
+        update gz_follow
+        <set>
+            <if test="symbol != null">
+                symbol = #{symbol,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="industry != null">
+                industry = #{industry,jdbcType=VARCHAR},
+            </if>
+            <if test="date != null">
+                date = #{date,jdbcType=TIMESTAMP},
+            </if>
+            <if test="desc != null">
+                desc = #{desc,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.api.domain.bean.GzFollow">
+    update gz_follow
+    set symbol = #{symbol,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      industry = #{industry,jdbcType=VARCHAR},
+      date = #{date,jdbcType=TIMESTAMP},
+      desc = #{desc,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+    <insert id="insertList" parameterType="java.util.List">
+        insert into gz_follow (symbol, name,industry, date, `desc`)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.symbol,jdbcType=VARCHAR}, #{item.name,jdbcType=VARCHAR},
+            #{item.industry,jdbcType=VARCHAR}, #{item.date,jdbcType=TIMESTAMP},
+            #{item.desc,jdbcType=VARCHAR}
+            )
+        </foreach>
+    </insert>
+</mapper>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.api.dao.mapper.LhbBranchMapper" >
+  <resultMap id="BaseResultMap" type="com.api.domain.LhbBranch" >
+    <result column="seq" property="seq" jdbcType="INTEGER" />
+    <result column="branch_id" property="branchId" jdbcType="VARCHAR" />
+    <result column="branch_name" property="branchName" jdbcType="VARCHAR" />
+    <result column="buy_amt" property="buyAmt" jdbcType="DOUBLE" />
+    <result column="sell_amt" property="sellAmt" jdbcType="DOUBLE" />
+    <result column="ratio" property="ratio" jdbcType="DOUBLE" />
+    <result column="net_amt" property="netAmt" jdbcType="DOUBLE" />
+    <result column="branch_tag" property="branchTag" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.api.domain.LhbBranch" >
+    insert into lhb_branch (seq, branch_id, branch_name, 
+      buy_amt, sell_amt, ratio, 
+      net_amt, branch_tag)
+    values (#{seq,jdbcType=INTEGER}, #{branchId,jdbcType=VARCHAR}, #{branchName,jdbcType=VARCHAR}, 
+      #{buyAmt,jdbcType=DOUBLE}, #{sellAmt,jdbcType=DOUBLE}, #{ratio,jdbcType=DOUBLE}, 
+      #{netAmt,jdbcType=DOUBLE}, #{branchTag,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.api.domain.LhbBranch" >
+    insert into lhb_branch
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="seq != null" >
+        seq,
+      </if>
+      <if test="branchId != null" >
+        branch_id,
+      </if>
+      <if test="branchName != null" >
+        branch_name,
+      </if>
+      <if test="buyAmt != null" >
+        buy_amt,
+      </if>
+      <if test="sellAmt != null" >
+        sell_amt,
+      </if>
+      <if test="ratio != null" >
+        ratio,
+      </if>
+      <if test="netAmt != null" >
+        net_amt,
+      </if>
+      <if test="branchTag != null" >
+        branch_tag,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="seq != null" >
+        #{seq,jdbcType=INTEGER},
+      </if>
+      <if test="branchId != null" >
+        #{branchId,jdbcType=VARCHAR},
+      </if>
+      <if test="branchName != null" >
+        #{branchName,jdbcType=VARCHAR},
+      </if>
+      <if test="buyAmt != null" >
+        #{buyAmt,jdbcType=DOUBLE},
+      </if>
+      <if test="sellAmt != null" >
+        #{sellAmt,jdbcType=DOUBLE},
+      </if>
+      <if test="ratio != null" >
+        #{ratio,jdbcType=DOUBLE},
+      </if>
+      <if test="netAmt != null" >
+        #{netAmt,jdbcType=DOUBLE},
+      </if>
+      <if test="branchTag != null" >
+        #{branchTag,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

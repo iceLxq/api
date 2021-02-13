@@ -20,5 +20,16 @@ public class DateUtil {
         return date;
     }
 
+    public static Date getDayByStr(String dateStr)  {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = null;
+        try {
+            date = sdf.parse(dateStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return date;
+    }
+
 
 }
