@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.api.dao.mapper.ShareFollowMapper" >
+  <resultMap id="BaseResultMap" type="com.api.dao.mapper.ShareFollow" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="symbol" property="symbol" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="three" property="three" jdbcType="DOUBLE" />
+    <result column="five" property="five" jdbcType="DOUBLE" />
+    <result column="ten" property="ten" jdbcType="DOUBLE" />
+    <result column="thirteen" property="thirteen" jdbcType="DOUBLE" />
+    <result column="twenty" property="twenty" jdbcType="DOUBLE" />
+    <result column="status" property="status" jdbcType="BIT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, symbol, name, three, five, ten, thirteen, twenty, status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from share_follow
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from share_follow
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.api.dao.mapper.ShareFollow" >
+    insert into share_follow (id, symbol, name, 
+      three, five, ten, thirteen, 
+      twenty, status)
+    values (#{id,jdbcType=INTEGER}, #{symbol,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{three,jdbcType=DOUBLE}, #{five,jdbcType=DOUBLE}, #{ten,jdbcType=DOUBLE}, #{thirteen,jdbcType=DOUBLE}, 
+      #{twenty,jdbcType=DOUBLE}, #{status,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.api.dao.mapper.ShareFollow" >
+    insert into share_follow
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="symbol != null" >
+        symbol,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="three != null" >
+        three,
+      </if>
+      <if test="five != null" >
+        five,
+      </if>
+      <if test="ten != null" >
+        ten,
+      </if>
+      <if test="thirteen != null" >
+        thirteen,
+      </if>
+      <if test="twenty != null" >
+        twenty,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="symbol != null" >
+        #{symbol,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="three != null" >
+        #{three,jdbcType=DOUBLE},
+      </if>
+      <if test="five != null" >
+        #{five,jdbcType=DOUBLE},
+      </if>
+      <if test="ten != null" >
+        #{ten,jdbcType=DOUBLE},
+      </if>
+      <if test="thirteen != null" >
+        #{thirteen,jdbcType=DOUBLE},
+      </if>
+      <if test="twenty != null" >
+        #{twenty,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.api.dao.mapper.ShareFollow" >
+    update share_follow
+    <set >
+      <if test="symbol != null" >
+        symbol = #{symbol,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="three != null" >
+        three = #{three,jdbcType=DOUBLE},
+      </if>
+      <if test="five != null" >
+        five = #{five,jdbcType=DOUBLE},
+      </if>
+      <if test="ten != null" >
+        ten = #{ten,jdbcType=DOUBLE},
+      </if>
+      <if test="thirteen != null" >
+        thirteen = #{thirteen,jdbcType=DOUBLE},
+      </if>
+      <if test="twenty != null" >
+        twenty = #{twenty,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.api.dao.mapper.ShareFollow" >
+    update share_follow
+    set symbol = #{symbol,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      three = #{three,jdbcType=DOUBLE},
+      five = #{five,jdbcType=DOUBLE},
+      ten = #{ten,jdbcType=DOUBLE},
+      thirteen = #{thirteen,jdbcType=DOUBLE},
+      twenty = #{twenty,jdbcType=DOUBLE},
+      status = #{status,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
