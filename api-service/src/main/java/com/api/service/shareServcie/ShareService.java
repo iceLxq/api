@@ -5,6 +5,7 @@ import com.api.domain.share.Share;
 import com.api.domain.snowResult.SnowResult;
 import com.api.service.daylyService.DaylyService;
 import com.api.util.DateUtil;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,8 +57,8 @@ public class ShareService {
         return shareMapper.getShareByDate(date);
     }
 
-    public List<Share> getShareLimit2ByDate(String symbol) {
-        return shareMapper.getShareLimit2ByDate(symbol);
+    public List<Share> getShareLimitByDate(String symbol, int limitDay) {
+        return shareMapper.getShareLimitByDate(symbol, limitDay);
     }
 
     public Double getMA5(String symbol, Double ma) {
@@ -77,7 +78,7 @@ public class ShareService {
      * 获取上一天的数据
      */
     public Share getLastdayShare(String symbol) {
-        List<Share> shareList = shareMapper.getShareLimit2ByDate(symbol);
+        List<Share> shareList = shareMapper.getShareLimitByDate(symbol, 2);
         if (!shareList.isEmpty() && shareList.size() == 2) {
             return shareList.get(1);
         }
@@ -86,4 +87,34 @@ public class ShareService {
     }
 
 
+    public Date getDateBegin(int limitDay, String symbol) {
+        if (StringUtils.isEmpty(symbol)) {
+            symbol = "002714";
+        }
+        Share beginRecord = shareMapper.getDateBeginRecord(limitDay, symbol);
+        return beginRecord.getDate();
+    }
+
+
+    /**
+     * symbol < 6880000
+     */
+    public List<Share> getShareListByDate(Date date) {
+        return shareMapper.getShareListByDate(date);
+    }
+
+
+
+
+    public List<Share> getSharePercentDayIncr(int limitDay, String symbol) {
+        if (null == symbol) {
+            symbol = "002741";
+        }
+        List<Share> shareLimitByDate = shareMapper.getShareLimitByDate(symbol, limitDay + 1);
+        if (shareLimitByDate.isEmpty()){
+            return null ;
+        }
+        Date beginDay = shareLimitByDate.get(limitDay).getDate();
+        return shareMapper.getSharePercentDayIncr(limitDay,beginDay);
+    }
 }

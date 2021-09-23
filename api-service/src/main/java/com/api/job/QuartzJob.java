@@ -5,6 +5,7 @@ import com.api.domain.share.Share;
 import com.api.domain.snowResult.LhbResponse;
 import com.api.domain.snowResult.LhbResult;
 import com.api.domain.snowResult.SnowResult;
+import com.api.domain.snowResult.SymbolDataResult;
 import com.api.service.LhbService;
 import com.api.service.daylyService.DaylyService;
 import com.api.service.shareServcie.ShareService;
@@ -13,10 +14,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 /**
@@ -48,6 +51,7 @@ public class QuartzJob {
         Map<String, Object> param = new HashMap<>();
         SnowResult snowResult = restTemplate.getForObject(url, SnowResult.class, param);
         List<Share> list = snowResult.getData().getList();
+      //  updateStartPrice(list);
         try {
             if (!checkExist(list.get(0)) && !checkExist(list.get(1))) { //休市
                 return;
@@ -75,6 +79,24 @@ public class QuartzJob {
             }
             syncSecuritiesCode();
         }
+    }
+
+    public void updateStartPrice(List<Share> list) {
+        String url ="http://stock.xueqiu.com/v5/stock/chart/minute.json?symbol=SH601728&period=1d";
+        Map<String, Object> param = new HashMap<>();
+        param.put("symbol","SH601728");
+        param.put("period","1d");
+        String symbolDataResult = restTemplate.getForObject(url, String.class,param);
+        System.out.println(symbolDataResult);
+
+//        list.forEach(share -> {
+////            String url = "https://stock.xueqiu.com/v5/stock/chart/minute.json?symbol="+share.getSymbolCode()+"&period=1d";
+//            String url = "https://stock.xueqiu.com/v5/stock/chart/minute.json?symbol="+"SH601728"+"&period=1d";
+//            Map<String, Object> param = new HashMap<>();
+//            SymbolDataResult symbolDataResult = restTemplate.getForObject(url, SymbolDataResult.class, param);
+//            System.out.println(symbolDataResult);
+//        });
+
     }
 
     private Boolean checkExist(Share share) {

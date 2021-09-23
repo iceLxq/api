@@ -2,6 +2,7 @@ package main.java;
 
 import com.api.domain.share.Share;
 import com.api.job.QuartzJob;
+import com.api.service.RuleService;
 import com.api.service.daylyService.DaylyService;
 import com.api.service.shareServcie.ShareService;
 import main.Application;
@@ -11,9 +12,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.locks.ReentrantLock;
 
 
 /**
@@ -33,9 +39,33 @@ public class TestControllerTest {
     @Autowired
     private ShareService shareService;
 
+    @Autowired
+    private RuleService ruleService;
+
+    /**
+     * 点这个
+     */
+    @Test
+
+    public void testTotal(){
+        quartzJob.syncSecuritiesCode();
+      //  daylyService.cacheDayFollow();
+       // quartzJob.syncLHBData();
+    }
+
     @Test
     public void test(){
         daylyService.cacheDayFollow();
+        //daylyService.cacheDayFollow();
+//        daylyService.cache60Breach();
+    }
+
+    @Test
+    public void test3(){
+      //  ruleService.comparePrice(5);
+        List<Share> shareList = new ArrayList<>();
+        quartzJob.updateStartPrice(shareList);
+
     }
 
     @Test
@@ -45,6 +75,9 @@ public class TestControllerTest {
 
     @Test
     public void test2() throws ParseException {
+        ReentrantLock lock = new ReentrantLock();
+        CountDownLatch count = new CountDownLatch(2);
+        count.countDown();
         String[] arr = {"2020-03-05","2020-03-04","2020-03-03","2020-03-02","2020-02-28"};
         SimpleDateFormat smf = new SimpleDateFormat("yyyy-MM-dd");//注意月份是MM
         Date date4 = smf.parse(arr[0]);
@@ -108,6 +141,13 @@ public class TestControllerTest {
         System.out.println(shares227.size());
     }
 
+    @Test
+    public void shareServiceTest(){
+        List<Share> sharePercent3DayIncr = shareService.getSharePercentDayIncr(3, null);
+        List<Share> sharePercent5DayIncr = shareService.getSharePercentDayIncr(5, null);
+        List<Share> sharePercent10DayIncr = shareService.getSharePercentDayIncr(10, null);
+        System.out.println(sharePercent5DayIncr);
+    }
 
 
 

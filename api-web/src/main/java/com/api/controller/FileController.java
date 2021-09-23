@@ -85,7 +85,7 @@ public class FileController {
                     gzFollowList.add(record);
                 }
             }
-            gzFollowService.insterList(gzFollowList);
+            gzFollowService.compareAndInsert(gzFollowList);
             return ResponseUtil.getSuccessWebResponse();
         } catch (Exception e) {
             logger.error(e.getMessage());

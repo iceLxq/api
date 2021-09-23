@@ -24,12 +24,21 @@ public class XueqiuProxyServe {
     private ShareService shareService;
 
     public List<Share> getShareInfo(){
+        String url = "https://xueqiu.com/S/SH601728";
+        Map<String, Object> param = new HashMap<>();
+        SnowResult snowResult = restTemplate.getForObject(url, SnowResult.class, param);
+        return null;
+
+    }
+    public List<Share> getShareInfoList(){
         String url = "https://xueqiu.com/service/v5/stock/screener/quote/list?size=5000&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz&_=1564279775146&page=1";
         Map<String, Object> param = new HashMap<>();
         SnowResult snowResult = restTemplate.getForObject(url, SnowResult.class, param);
         List<Share> list = snowResult.getData().getList();
         return list;
     }
+
+
 
     public Boolean checkOpen(List<Share> list){
         if (!checkExist(list.get(0)) && !checkExist(list.get(1))) { //休市

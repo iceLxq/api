@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.api.dao.mapper.ShareCategoryRecordMapper" >
+  <resultMap id="BaseResultMap" type="com.api.domain.ShareCategoryRecord" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="category" property="category" jdbcType="VARCHAR" />
+    <result column="category_code" property="categoryCode" jdbcType="VARCHAR" />
+    <result column="share_code" property="shareCode" jdbcType="VARCHAR" />
+    <result column="share_name" property="shareName" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="DOUBLE" />
+    <result column="amplitude" property="amplitude" jdbcType="DOUBLE" />
+    <result column="chg" property="chg" jdbcType="DOUBLE" />
+    <result column="current" property="current" jdbcType="DOUBLE" />
+    <result column="current_year_percent" property="currentYearPercent" jdbcType="DOUBLE" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="symbol" property="symbol" jdbcType="VARCHAR" />
+    <result column="percent" property="percent" jdbcType="DOUBLE" />
+    <result column="date" property="date" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, category, category_code, share_code, share_name, amount, amplitude, chg, current, 
+    current_year_percent, name, symbol, percent, date
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from share_category_record
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from share_category_record
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.api.domain.ShareCategoryRecord" >
+    insert into share_category_record (id, category, category_code, 
+      share_code, share_name, amount, 
+      amplitude, chg, current, 
+      current_year_percent, name, symbol, 
+      percent, date)
+    values (#{id,jdbcType=BIGINT}, #{category,jdbcType=VARCHAR}, #{categoryCode,jdbcType=VARCHAR}, 
+      #{shareCode,jdbcType=VARCHAR}, #{shareName,jdbcType=VARCHAR}, #{amount,jdbcType=DOUBLE}, 
+      #{amplitude,jdbcType=DOUBLE}, #{chg,jdbcType=DOUBLE}, #{current,jdbcType=DOUBLE}, 
+      #{currentYearPercent,jdbcType=DOUBLE}, #{name,jdbcType=VARCHAR}, #{symbol,jdbcType=VARCHAR}, 
+      #{percent,jdbcType=DOUBLE}, #{date,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.api.domain.ShareCategoryRecord" >
+    insert into share_category_record
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="category != null" >
+        category,
+      </if>
+      <if test="categoryCode != null" >
+        category_code,
+      </if>
+      <if test="shareCode != null" >
+        share_code,
+      </if>
+      <if test="shareName != null" >
+        share_name,
+      </if>
+      <if test="amount != null" >
+        amount,
+      </if>
+      <if test="amplitude != null" >
+        amplitude,
+      </if>
+      <if test="chg != null" >
+        chg,
+      </if>
+      <if test="current != null" >
+        current,
+      </if>
+      <if test="currentYearPercent != null" >
+        current_year_percent,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="symbol != null" >
+        symbol,
+      </if>
+      <if test="percent != null" >
+        percent,
+      </if>
+      <if test="date != null" >
+        date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="category != null" >
+        #{category,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryCode != null" >
+        #{categoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="shareCode != null" >
+        #{shareCode,jdbcType=VARCHAR},
+      </if>
+      <if test="shareName != null" >
+        #{shareName,jdbcType=VARCHAR},
+      </if>
+      <if test="amount != null" >
+        #{amount,jdbcType=DOUBLE},
+      </if>
+      <if test="amplitude != null" >
+        #{amplitude,jdbcType=DOUBLE},
+      </if>
+      <if test="chg != null" >
+        #{chg,jdbcType=DOUBLE},
+      </if>
+      <if test="current != null" >
+        #{current,jdbcType=DOUBLE},
+      </if>
+      <if test="currentYearPercent != null" >
+        #{currentYearPercent,jdbcType=DOUBLE},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="symbol != null" >
+        #{symbol,jdbcType=VARCHAR},
+      </if>
+      <if test="percent != null" >
+        #{percent,jdbcType=DOUBLE},
+      </if>
+      <if test="date != null" >
+        #{date,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.api.domain.ShareCategoryRecord" >
+    update share_category_record
+    <set >
+      <if test="category != null" >
+        category = #{category,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryCode != null" >
+        category_code = #{categoryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="shareCode != null" >
+        share_code = #{shareCode,jdbcType=VARCHAR},
+      </if>
+      <if test="shareName != null" >
+        share_name = #{shareName,jdbcType=VARCHAR},
+      </if>
+      <if test="amount != null" >
+        amount = #{amount,jdbcType=DOUBLE},
+      </if>
+      <if test="amplitude != null" >
+        amplitude = #{amplitude,jdbcType=DOUBLE},
+      </if>
+      <if test="chg != null" >
+        chg = #{chg,jdbcType=DOUBLE},
+      </if>
+      <if test="current != null" >
+        current = #{current,jdbcType=DOUBLE},
+      </if>
+      <if test="currentYearPercent != null" >
+        current_year_percent = #{currentYearPercent,jdbcType=DOUBLE},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="symbol != null" >
+        symbol = #{symbol,jdbcType=VARCHAR},
+      </if>
+      <if test="percent != null" >
+        percent = #{percent,jdbcType=DOUBLE},
+      </if>
+      <if test="date != null" >
+        date = #{date,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.api.domain.ShareCategoryRecord" >
+    update share_category_record
+    set category = #{category,jdbcType=VARCHAR},
+      category_code = #{categoryCode,jdbcType=VARCHAR},
+      share_code = #{shareCode,jdbcType=VARCHAR},
+      share_name = #{shareName,jdbcType=VARCHAR},
+      amount = #{amount,jdbcType=DOUBLE},
+      amplitude = #{amplitude,jdbcType=DOUBLE},
+      chg = #{chg,jdbcType=DOUBLE},
+      current = #{current,jdbcType=DOUBLE},
+      current_year_percent = #{currentYearPercent,jdbcType=DOUBLE},
+      name = #{name,jdbcType=VARCHAR},
+      symbol = #{symbol,jdbcType=VARCHAR},
+      percent = #{percent,jdbcType=DOUBLE},
+      date = #{date,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

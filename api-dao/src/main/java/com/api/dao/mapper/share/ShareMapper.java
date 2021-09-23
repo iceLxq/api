@@ -30,7 +30,13 @@ public interface ShareMapper {
 
     List<Share> getShareByDate(Date date);
 
-    List<Share> getShareLimit2ByDate(String symbol);
+    List<Share> getShareLimitByDate(@Param("symbol") String symbol, @Param("limitDay") int limitDay);
 
-    Double getMaCurrentTotal(@Param("symbol")String symbol, @Param("ma") int ma);
+    Double getMaCurrentTotal(@Param("symbol") String symbol, @Param("ma") int ma);
+
+    Share getDateBeginRecord(@Param("limitDay") int limitDay, @Param("symbol") String symbol);
+
+    List<Share> getShareListByDate(@Param("date") Date date);
+
+    List<Share> getSharePercentDayIncr(@Param("limitDay") int limitDay, @Param("date") Date date);
 }

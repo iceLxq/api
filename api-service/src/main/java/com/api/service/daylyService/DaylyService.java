@@ -47,9 +47,12 @@ public class DaylyService {
      * 3: 成交量大于4亿
      */
     public void cacheDayFollow() {
-        List<Share> daylyShareInfoList = xueqiuProxyServe.getShareInfo();
+        List<Share> daylyShareInfoList = xueqiuProxyServe.getShareInfoList();
         Share yesterdayShare = getYesterdayShare(daylyShareInfoList);
 //        List<Share> lastDayShareList = shareService.getShareByDate(DateUtil.getDayByStr("2021-1-7"));
+        if (null == yesterdayShare){
+            return;
+        }
         List<Share> lastDayShareList = shareService.getShareByDate(yesterdayShare.getDate());
         List<Dayfollow> dayfollowList = new ArrayList<>();
         daylyShareInfoList.stream().forEach(daylyShare -> {
@@ -73,7 +76,7 @@ public class DaylyService {
                     dayfollowList.add(dayfollow);
                 }
             } catch (Exception e) {
-                logger.info("cacheDayFollowExcepition" + daylyShare.getName());
+                logger.info("cacheDayFollowException"  + daylyShare.getName());
             }
         });
         if (dayfollowList.isEmpty()) {
@@ -110,7 +113,7 @@ public class DaylyService {
     private Share getYesterdayShare(List<Share> daylyShareInfoList) {
         Share maxIdShare = shareService.getMaxId();
         if (maxIdShare.getDate().getTime() == DateUtil.getDay().getTime()) {
-            List<Share> shareList = shareService.getShareLimit2ByDate(maxIdShare.getSymbol());
+            List<Share> shareList = shareService.getShareLimitByDate(maxIdShare.getSymbol(),2);
             return shareList.get(1);
         }
         if (maxIdShare.getDate().getTime() < DateUtil.getDay().getTime()) {

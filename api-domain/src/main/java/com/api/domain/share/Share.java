@@ -68,6 +68,7 @@ public class Share {
 
     public String getSymbol() {
         if (symbol.startsWith("SZ") || symbol.startsWith("SH")) {
+            symbolCode = new String(symbol);
             symbol = symbol.substring(2);
         }
         return symbol;

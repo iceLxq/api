@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -17,7 +18,28 @@ public class GzFollowService {
     @Autowired
     private GzFollowMapper gzFollowMapper;
 
-    public void insterList(List<GzFollow> gzFollowList) {
+    public void instertList(List<GzFollow> gzFollowList) {
         gzFollowMapper.insertList(gzFollowList);
+    }
+
+    public void compareAndInsert(List<GzFollow> gzFollowList) {
+        if (gzFollowList.isEmpty()){
+            return ;
+        }
+        List<GzFollow> isnertRecord = compareWithPre(gzFollowList);
+        
+
+
+
+
+    }
+
+    private List<GzFollow> compareWithPre(List<GzFollow> gzFollowList) {
+        getLastRecord(gzFollowList.get(0).getDate());
+        return null;
+    }
+
+    public List<GzFollow> getLastRecord(Date date){
+        return null;
     }
 }

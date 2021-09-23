@@ -1,5 +1,6 @@
 package com.api.aopProxy;
 
+import com.alibaba.fastjson.JSON;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -23,7 +24,7 @@ public class AopProxy {
     @Before("pointCut()")
     public void log(JoinPoint joinPoint) {
         Object[] args = joinPoint.getArgs();
-        System.out.println("" + joinPoint.getSignature().getName() + "运行---@Before:参数列表是：{" + Arrays.asList(args) + "}");
+        System.out.println("" + joinPoint.getSignature().getName() + "运行---@Before:参数列表是：{" + JSON.toJSONString(Arrays.asList(args)) + "}");
     }
 
 }
