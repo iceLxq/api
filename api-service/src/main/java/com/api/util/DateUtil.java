@@ -31,5 +31,16 @@ public class DateUtil {
         return date;
     }
 
+    public static String getDayStr()  {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String  date = null;
+        try {
+            date = sdf.format(new Date());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return date;
+    }
+
 
 }

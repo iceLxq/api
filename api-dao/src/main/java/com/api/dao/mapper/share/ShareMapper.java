@@ -39,4 +39,8 @@ public interface ShareMapper {
     List<Share> getShareListByDate(@Param("date") Date date);
 
     List<Share> getSharePercentDayIncr(@Param("limitDay") int limitDay, @Param("date") Date date);
+
+    Double calculateAvgPrice(@Param("limitDay") int limitDay, @Param("symbol") String symbol);
+
+    List<Share> getLastShareList();
 }

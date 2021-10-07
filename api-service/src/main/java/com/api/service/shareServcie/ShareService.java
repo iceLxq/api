@@ -104,17 +104,30 @@ public class ShareService {
     }
 
 
-
-
     public List<Share> getSharePercentDayIncr(int limitDay, String symbol) {
         if (null == symbol) {
             symbol = "002741";
         }
         List<Share> shareLimitByDate = shareMapper.getShareLimitByDate(symbol, limitDay + 1);
-        if (shareLimitByDate.isEmpty()){
-            return null ;
+        if (shareLimitByDate.isEmpty()) {
+            return null;
         }
         Date beginDay = shareLimitByDate.get(limitDay).getDate();
-        return shareMapper.getSharePercentDayIncr(limitDay,beginDay);
+        return shareMapper.getSharePercentDayIncr(limitDay, beginDay);
     }
+
+
+    /**
+     * 计算平均值
+     */
+    public Double calculateAvgPrice(int limitDay, String symbol) {
+        Double price = shareMapper.calculateAvgPrice(limitDay, symbol);
+        return Double.parseDouble(new java.text.DecimalFormat("#.00").format(price));
+    }
+
+    public List<Share> getLastShareList() {
+        return shareMapper.getLastShareList();
+    }
+
+
 }

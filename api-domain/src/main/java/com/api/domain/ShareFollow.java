@@ -1,4 +1,4 @@
-package com.api.dao.mapper;
+package com.api.domain;
 
 public class ShareFollow {
     private Integer id;
@@ -17,7 +17,11 @@ public class ShareFollow {
 
     private Double twenty;
 
-    private Boolean status;
+    private Integer status;
+
+    private String focusOn;
+
+    private String description;
 
     public Integer getId() {
         return id;
@@ -83,11 +87,27 @@ public class ShareFollow {
         this.twenty = twenty;
     }
 
-    public Boolean getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    public String getFocusOn() {
+        return focusOn;
+    }
+
+    public void setFocusOn(String focusOn) {
+        this.focusOn = focusOn;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description == null ? null : description.trim();
     }
 }

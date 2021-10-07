@@ -30,6 +30,9 @@ public class XueqiuProxyServe {
         return null;
 
     }
+    /**
+     * 获取当前的share信息
+     */
     public List<Share> getShareInfoList(){
         String url = "https://xueqiu.com/service/v5/stock/screener/quote/list?size=5000&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz&_=1564279775146&page=1";
         Map<String, Object> param = new HashMap<>();
@@ -39,7 +42,9 @@ public class XueqiuProxyServe {
     }
 
 
-
+    /**
+     * 检查今日是否休市
+     */
     public Boolean checkOpen(List<Share> list){
         if (!checkExist(list.get(0)) && !checkExist(list.get(1))) { //休市
             return false;

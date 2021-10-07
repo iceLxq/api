@@ -218,4 +218,20 @@
           GROUP BY symbol , `name`) a
         ORDER BY percent  desc  limit 100;
     </select>
+
+    <select id="calculateAvgPrice" parameterType="Object" resultType="double">
+        SELECT sum(T1.current)/#{limitDay} current
+        from (
+            SELECT current
+            FROM share
+            WHERE symbol = #{symbol}
+            ORDER BY date DESC LIMIT #{limitDay}) T1;
+    </select>
+
+    <select id="getLastShareList"  resultMap="BaseResultMap">
+        select * FROM share where date =
+        (
+            select date from share where symbol = '002714' ORDER BY date desc limit 1
+        )
+    </select>
 </mapper>

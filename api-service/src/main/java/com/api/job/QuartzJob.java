@@ -6,6 +6,7 @@ import com.api.domain.snowResult.LhbResponse;
 import com.api.domain.snowResult.LhbResult;
 import com.api.domain.snowResult.SnowResult;
 import com.api.domain.snowResult.SymbolDataResult;
+import com.api.proxy.XueqiuProxyServe;
 import com.api.service.LhbService;
 import com.api.service.daylyService.DaylyService;
 import com.api.service.shareServcie.ShareService;
@@ -39,6 +40,9 @@ public class QuartzJob {
     private DaylyService daylyService;
     @Autowired
     private LhbService lhbService;
+    @Autowired
+    private XueqiuProxyServe xueqiuProxyServe;
+
 
     private static int retry = 0;
 
@@ -47,16 +51,12 @@ public class QuartzJob {
      */
     @Scheduled(cron = "30 4 16 * * ?")
     public void syncSecuritiesCode() {
-        String url = "https://xueqiu.com/service/v5/stock/screener/quote/list?size=5000&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz&_=1564279775146&page=1";
-        Map<String, Object> param = new HashMap<>();
-        SnowResult snowResult = restTemplate.getForObject(url, SnowResult.class, param);
-        List<Share> list = snowResult.getData().getList();
-      //  updateStartPrice(list);
+        List<Share> list = xueqiuProxyServe.getShareInfoList();
+        if (!checkExist(list.get(0)) && !checkExist(list.get(1))) { //休市
+            return;
+        }
+        updateStartPrice(list);
         try {
-            if (!checkExist(list.get(0)) && !checkExist(list.get(1))) { //休市
-                return;
-            }
-
             Date time = DateUtil.getDay();
             list.forEach(share -> {
                 share.setDate(time);
@@ -82,21 +82,16 @@ public class QuartzJob {
     }
 
     public void updateStartPrice(List<Share> list) {
-        String url ="http://stock.xueqiu.com/v5/stock/chart/minute.json?symbol=SH601728&period=1d";
-        Map<String, Object> param = new HashMap<>();
-        param.put("symbol","SH601728");
-        param.put("period","1d");
-        String symbolDataResult = restTemplate.getForObject(url, String.class,param);
-        System.out.println(symbolDataResult);
-
-//        list.forEach(share -> {
-////            String url = "https://stock.xueqiu.com/v5/stock/chart/minute.json?symbol="+share.getSymbolCode()+"&period=1d";
-//            String url = "https://stock.xueqiu.com/v5/stock/chart/minute.json?symbol="+"SH601728"+"&period=1d";
-//            Map<String, Object> param = new HashMap<>();
-//            SymbolDataResult symbolDataResult = restTemplate.getForObject(url, SymbolDataResult.class, param);
-//            System.out.println(symbolDataResult);
-//        });
-
+        List<Share> lastShareList = shareService.getLastShareList();
+        Map<String, Double> endPriceMap = new HashMap<>();
+        lastShareList.forEach(share ->
+            endPriceMap.put(share.getSymbol(), share.getCurrent())
+        );
+        list.forEach(share -> {
+            if (endPriceMap.containsKey(share.getSymbol())) {
+                share.setStartPrice(endPriceMap.get(share.getSymbol()));
+            }
+        });
     }
 
     private Boolean checkExist(Share share) {

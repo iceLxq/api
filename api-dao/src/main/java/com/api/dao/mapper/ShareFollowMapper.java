@@ -1,6 +1,9 @@
 package com.api.dao.mapper;
 
-import com.api.dao.mapper.ShareFollow;
+
+import com.api.domain.ShareFollow;
+
+import java.util.List;
 
 public interface ShareFollowMapper {
     int deleteByPrimaryKey(Integer id);
@@ -14,4 +17,7 @@ public interface ShareFollowMapper {
     int updateByPrimaryKeySelective(ShareFollow record);
 
     int updateByPrimaryKey(ShareFollow record);
+
+    List<ShareFollow> getAllRecord();
+
 }

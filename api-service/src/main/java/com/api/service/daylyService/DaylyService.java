@@ -134,13 +134,4 @@ public class DaylyService {
 
     }
 
-    private BigDecimal double2BigDecimal(Double num) {
-        return new BigDecimal(num);
-    }
-
-
-    public static void main(String[] args) {
-    }
-
-
 }
