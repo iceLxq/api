@@ -11,10 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by 李显琪 on 2021/10/7.
@@ -31,6 +28,9 @@ public class SharePriceAlarmSchedule {
 
     //缓存shareFollow 的数据
     private Map<String, List<ShareFollow>> shareFollowMap = new HashMap<>();
+
+    //缓存已发的share日线数据
+    private List<String> sendMsgList = new ArrayList<>();
 
     @Scheduled(cron = "0 0/1 * * * ?")
     public void priceAlarm() {
@@ -51,48 +51,50 @@ public class SharePriceAlarmSchedule {
         if (!StringUtils.isEmpty(focusOn)) { //关注 3， 5日线
             List<String> focusOnList = Arrays.asList(focusOn.split(","));
             focusOnList.forEach(dayStr ->
-                    comparePriceSwitch( share, shareFollow, dayStr)
+                    comparePriceSwitch(share, shareFollow, dayStr)
             );
         }
-        comparePrice(share.getCurrent(), shareFollow.getFive(), true, share.getName(),5);
+        comparePrice(share.getCurrent(), shareFollow.getFive(), true, share.getName(), 5);
 
     }
 
     private void comparePriceSwitch(Share share, ShareFollow shareFollow, String dayStr) {
         Boolean gt = true; //突破， 现价需要大于均价
-        if (dayStr.startsWith("-")){
+        if (dayStr.startsWith("-")) {
             gt = false; //回落， 现价需要小于均价
             dayStr = dayStr.substring(1);
         }
-        switch (dayStr){
+        switch (dayStr) {
             case "3":
-                comparePrice(share.getCurrent(), shareFollow.getThree(), gt, share.getName(),3);
+                comparePrice(share.getCurrent(), shareFollow.getThree(), gt, share.getName(), 3);
                 break;
             case "5":
-                comparePrice(share.getCurrent(), shareFollow.getFive(), gt, share.getName(),5);
+                comparePrice(share.getCurrent(), shareFollow.getFive(), gt, share.getName(), 5);
                 break;
             case "10":
-                comparePrice(share.getCurrent(), shareFollow.getTen(), gt, share.getName(),10);
+                comparePrice(share.getCurrent(), shareFollow.getTen(), gt, share.getName(), 10);
                 break;
             case "13":
-                comparePrice(share.getCurrent(), shareFollow.getThirteen(), gt, share.getName(),13);
+                comparePrice(share.getCurrent(), shareFollow.getThirteen(), gt, share.getName(), 13);
                 break;
             case "20":
-                comparePrice(share.getCurrent(), shareFollow.getTwenty(), gt, share.getName(),20);
+                comparePrice(share.getCurrent(), shareFollow.getTwenty(), gt, share.getName(), 20);
                 break;
             default:
-                comparePrice(share.getCurrent(), shareFollow.getFive(), gt, share.getName(),5);
+                comparePrice(share.getCurrent(), shareFollow.getFive(), gt, share.getName(), 5);
         }
 
     }
 
-    private void comparePrice(Double current, Double avgPrice, Boolean gt, String name, int day){
+    private void comparePrice(Double current, Double avgPrice, Boolean gt, String name, int day) {
         if (gt) {
-            if (current > avgPrice){
+            if (current > avgPrice && !sendMsgList.contains(name + day)) {
+                sendMsgList.add(name + day);
                 dingDingService.sendDingMsg(day, name);
             }
         } else {
-            if (current < avgPrice){
+            if (current < avgPrice && !sendMsgList.contains(name + day)) {
+                sendMsgList.add(name + day);
                 dingDingService.sendDingMsg(day, name);
             }
         }
@@ -110,6 +112,7 @@ public class SharePriceAlarmSchedule {
         if (shareFollowMap.get(key) == null) {
             List<ShareFollow> shareFollowList = shareFollowService.getAll();
             shareFollowMap.put(key, shareFollowList);
+            sendMsgList = new ArrayList<>();
         }
     }
 }
