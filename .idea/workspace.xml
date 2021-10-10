@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d87be182-f3c1-4cb2-a943-30fac2ffe000" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/LhbMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/Lhb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/LhbResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/LhbResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/LhbVo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-service/src/main/java/com/api/service/LhbService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-service/src/main/java/com/api/service/ProxyService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-service/src/main/resources/mapper/LhbMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api-web/test/main/java/ProxyTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api-domain/target/classes/com/api/domain/snowResult/DataResult.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api-domain/target/classes/com/api/domain/snowResult/SnowResult.class" afterPath="$PROJECT_DIR$/api-domain/target/classes/com/api/domain/snowResult/SnowResult.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api-service/target/classes/com/api/job/QuartzJob.class" afterPath="$PROJECT_DIR$/api-service/target/classes/com/api/job/QuartzJob.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api-service/target/classes/com/api/proxy/XueqiuProxyServe.class" afterPath="$PROJECT_DIR$/api-service/target/classes/com/api/proxy/XueqiuProxyServe.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api-service/target/classes/com/api/service/shareServcie/ShareService.class" afterPath="$PROJECT_DIR$/api-service/target/classes/com/api/service/shareServcie/ShareService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/SnowResult.java" afterPath="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/SnowResult.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api-service/src/main/java/com/api/job/QuartzJob.java" afterPath="$PROJECT_DIR$/api-service/src/main/java/com/api/job/QuartzJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api-service/src/main/java/com/api/service/shareServcie/ShareService.java" afterPath="$PROJECT_DIR$/api-service/src/main/java/com/api/service/shareServcie/ShareService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api-service/src/main/java/com/api/util/DateUtil.java" afterPath="$PROJECT_DIR$/api-service/src/main/java/com/api/util/DateUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api-web/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/api-web/src/main/resources/generatorConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api-web/target/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/api-web/target/classes/generatorConfig.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/DataResult.java" afterPath="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/ShareResponse.java" />
-    </list>
+    <list default="true" id="d87be182-f3c1-4cb2-a943-30fac2ffe000" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/apiweb/target/" />
@@ -38,77 +16,74 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/api$Test.coverage" NAME="Test Coverage Results" MODIFIED="1602495848008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.api.controller.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="api" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ProxyTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-web/test/main/java/ProxyTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TestControllerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api-web/test/main/java/TestControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-              <folding>
-                <element signature="e#882#883#0" expanded="true" />
-                <element signature="e#927#928#0" expanded="true" />
-                <element signature="e#963#964#0" expanded="true" />
-                <element signature="e#1009#1010#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShareService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/shareServcie/ShareService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="47" column="23" lean-forward="false" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1533#1534#0" expanded="true" />
-                <element signature="e#1588#1589#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LhbMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api-service/src/main/resources/mapper/LhbMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="728">
-              <caret line="79" column="43" lean-forward="false" selection-start-line="79" selection-start-column="43" selection-end-line="79" selection-end-column="43" />
-              <folding>
-                <marker date="1593951332640" expanded="true" signature="889:1240" ph="insert into lhb... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lhb.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/Lhb.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+            <state relative-caret-position="1218">
+              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuartzJob.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/job/QuartzJob.java">
+      <file leaf-file-name="DaylyService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/daylyService/DaylyService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="44" column="38" lean-forward="true" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
+            <state relative-caret-position="290">
+              <caret line="36" column="7" lean-forward="false" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XueqiuProxyServe.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/proxy/XueqiuProxyServe.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="841">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Share.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/share/Share.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1856">
+              <caret line="76" column="18" lean-forward="false" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
+              <folding>
+                <element signature="e#1494#1495#0" expanded="true" />
+                <element signature="e#1527#1528#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Predicate.java" pinned="false" current-in-tab="false">
+        <entry file="jar://F:/jdk1.8/src.zip!/java/util/function/Predicate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="725">
+              <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -124,48 +99,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LhbService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/LhbService.java">
+      <file leaf-file-name="SharePriceAlarmSchedule.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/job/SharePriceAlarmSchedule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="22" column="1" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+            <state relative-caret-position="2175">
+              <caret line="86" column="5" lean-forward="false" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#398#399#0" expanded="true" />
-                <element signature="e#441#442#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LhbMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/LhbMapper.java">
+      <file leaf-file-name="DingDingService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/msg/DingDingService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+            <state relative-caret-position="435">
+              <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DaylyController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/controller/DaylyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LhbResult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/LhbResult.java">
+      <file leaf-file-name="ShareFollowService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/ShareFollowService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="1537">
+              <caret line="60" column="8" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
               <folding>
-                <element signature="e#235#236#0" expanded="true" />
-                <element signature="e#262#263#0" expanded="true" />
-                <element signature="e#307#308#0" expanded="true" />
-                <element signature="e#339#340#0" expanded="true" />
-                <element signature="e#376#377#0" expanded="true" />
-                <element signature="e#409#410#0" expanded="true" />
-                <element signature="e#461#462#0" expanded="true" />
-                <element signature="e#505#506#0" expanded="true" />
-                <element signature="e#549#550#0" expanded="true" />
-                <element signature="e#589#590#0" expanded="true" />
-                <element signature="e#655#656#0" expanded="true" />
-                <element signature="e#713#714#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1720#1721#0" expanded="true" />
+                <element signature="e#1775#1776#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -178,47 +154,60 @@
       <list>
         <option value="myXML" />
         <option value="JUnit4 Test Class" />
+        <option value="Enum" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>logger.inf</find>
-      <find>logger.in</find>
-      <find>logger.i</find>
-      <find>logger.</find>
-      <find>log.</find>
-      <find>log.inf</find>
-      <find>log.in</find>
+      <find>shareca</find>
+      <find>sharecat</find>
+      <find>sharecategr</find>
+      <find>sharecateg</find>
+      <find>sharecatego</find>
+      <find>sharecategory</find>
+      <find>ShareCategory</find>
+      <find>ShareCategoryService</find>
+      <find>t</find>
+      <find>ta'b'l</find>
+      <find>ta'b'le</find>
+      <find>table</find>
+      <find>sha</find>
       <find>share</find>
-      <find>getShareByRecord</find>
-      <find>l</find>
-      <find>lo</find>
-      <find>logge</find>
-      <find>log</find>
-      <find>logg</find>
-      <find>logger</find>
-      <find>getshareLimit2ByDate</find>
-      <find>DayfollowMapper</find>
-      <find>com.api.dao.mapper.Dayfollow</find>
-      <find>getDayRecord</find>
-      <find>updateBySymbolAndDate</find>
-      <find>getDaylyInfo</find>
-      <find>sno</find>
-      <find>snow</find>
-      <find>snowre</find>
-      <find>snowres</find>
-      <find>batchInsert</find>
-      <find>com.api.dao.mapper</find>
-      <find>com.api.dao.mapper.</find>
-      <find>com.api.dao.mapper.l</find>
-      <find>com.api.dao.mapper.Lhb</find>
+      <find>share_</find>
+      <find>share_ca</find>
+      <find>share_cate</find>
+      <find>com.api.dao.mapper.ShareFollow</find>
+      <find>com.api.dao.mapper.ShareFollowMapper</find>
+      <find>updateByPrimaryKeySelective</find>
+      <find>gTy</find>
+      <find>focusOn</find>
+      <find>shareFollowMap</find>
+      <find>.idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml</find>
+      <find>gita</find>
+      <find>git</find>
+      <find>g</find>
+      <find>.</find>
+      <find>.g</find>
+      <find>.git</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;com.api.domain.share.Share&quot;</replace>
       <replace>com.api.domain.bean.Dayfollow</replace>
       <replace>com.api.domain</replace>
+      <replace>com.api.domain.LhbInfo</replace>
+      <replace>com.api.domain.LhbBranch</replace>
+      <replace>com.api.domain.bean.GzFollow</replace>
+      <replace>com.api.domain.ShareCategoryRank</replace>
+      <replace>com.api.domain.ShareCategoryRecord</replace>
+      <replace>com.api.domain.ShareCategory</replace>
+      <replace>Category</replace>
+      <replace>CategoryService</replace>
+      <replace>com.api.domain.ShareFollow</replace>
+      <replace>com.api.domain.ShareFollow.ShareFollowMapper</replace>
+      <replace>gty</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -232,57 +221,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/service/securitiesCodeService/SecuritiesCodeService.java" />
-        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/service/shareServcie/ShareServcie.java" />
-        <option value="$PROJECT_DIR$/api-web/src/main/java/com/api/dao/mapper/Share.java" />
-        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/util/RedisUtil.java" />
-        <option value="$PROJECT_DIR$/api-web/initSql" />
-        <option value="$PROJECT_DIR$/api-web/share.sql" />
-        <option value="$PROJECT_DIR$/api-web/src/main/resources/log4j.xml" />
-        <option value="$PROJECT_DIR$/api-web/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/api-web/src/main/java/com/api/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/proxy/xueqiuProxyServcie.java" />
-        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/proxy/xueqiuProxyService.java" />
-        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/proxy/xueqiuProxyServe.java" />
-        <option value="$PROJECT_DIR$/api-web/test/java/CacheTest.java" />
-        <option value="$PROJECT_DIR$/api-web/src/main/java/ApiApplication.java" />
-        <option value="$PROJECT_DIR$/api-web/pom.xml" />
+        <option value="$PROJECT_DIR$/api-service/src/main/resources/mapper/GzFollowMapper.xml" />
+        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/constant/Constant.java" />
+        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/ResultResponse.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/util/ResponseUtil.java" />
+        <option value="$PROJECT_DIR$/api-web/src/main/java/com/api/controller/FileController.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/service/GzFollowService.java" />
         <option value="$PROJECT_DIR$/api-web/src/main/java/Application.java" />
-        <option value="$PROJECT_DIR$/api-web/test/main/com/api/controller/TestControllerTest.java" />
-        <option value="$PROJECT_DIR$/api-web/test/main/com/TestControllerTest.java" />
-        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/bean/DayFollow.java" />
-        <option value="$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/securityCode/SecurityCodeMapper.java" />
-        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/job/quartzJob.java" />
-        <option value="$PROJECT_DIR$/api-web/test/com/api/controller/TestControllerTest.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/model/ShareCompare.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/service/RuleService.java" />
+        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/share/Share.java" />
+        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/SymbolDataResult.java" />
+        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/SymbolData.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/snow/Snowlogin.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/snow/constant/Loginenum.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/snow/constant/LoginEnum.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/snow/login/Snowlogin.java" />
+        <option value="$PROJECT_DIR$/api-service/pom.xml" />
+        <option value="$PROJECT_DIR$/api-service/src/main/resources/html/XueQiuHq.html" />
+        <option value="$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/ShareCategoryRankMapper.java" />
+        <option value="$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/ShareCategoryRecordMapper.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/resources/mapper/ShareCategoryRankMapper.xml" />
+        <option value="$PROJECT_DIR$/api-service/src/main/resources/mapper/ShareCategoryRecordMapper.xml" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/aopProxy/AopProxy.java" />
+        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/ShareCategory.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/resources/mapper/ShareCategoryMapper.xml" />
+        <option value="$PROJECT_DIR$/api-service/src/main/resources/mapper/CategoryMapper.xml" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/htmlParse/XQHqParse.java" />
+        <option value="$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/ShareCategoryMapper.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/service/shareServcie/ShareCategoryService.java" />
+        <option value="$PROJECT_DIR$/api-web/test/main/java/ShareCategoryTest.java" />
+        <option value="$PROJECT_DIR$/api-web/test/main/java/TestControllerTest.java" />
+        <option value="$PROJECT_DIR$/api-web/test/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/api-web/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/ShareFollowMapper.java" />
+        <option value="$PROJECT_DIR$/api-web/test/main/java/ShareFollowTest.java" />
+        <option value="$PROJECT_DIR$/api-web/test/main/java/DingDingTest.java" />
+        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/DingMsg/DingBody.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/service/msg/DingDingService.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/job/SharePriceAlarmS.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/util/DateUtil.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/service/ShareFollowService.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/proxy/XueqiuProxyServe.java" />
         <option value="$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/share/ShareMapper.java" />
         <option value="$PROJECT_DIR$/api-service/src/main/resources/mapper/ShareMapper.xml" />
-        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/share/Share.java" />
-        <option value="$PROJECT_DIR$/api-web/src/main/java/com/api/dao/mapper/DayfollowMapper.xml" />
-        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/bean/Dayfollow.java" />
-        <option value="$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/DayfollowMapper.java" />
-        <option value="$PROJECT_DIR$/api-service/src/main/resources/mapper/DayfollowMapper.xml" />
-        <option value="$PROJECT_DIR$/api-web/src/main/java/com/api/controller/DaylyController.java" />
-        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/service/daylyService/DaylyService.java" />
-        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/service/DayfollowService.java" />
-        <option value="F:/jdk1.8/javafx-src.zip!/com/sun/javafx/tk/Toolkit.java" />
-        <option value="$PROJECT_DIR$/api-web/test/main/java/TestControllerTest.java" />
-        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/util/DateUtil.java" />
-        <option value="$PROJECT_DIR$/api-web/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/DataResult.java" />
-        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/service/LhbService.java" />
-        <option value="$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/LhbMapper.java" />
-        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/service/ProxyService.java" />
-        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/SnowResult.java" />
-        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/proxy/XueqiuProxyServe.java" />
         <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/service/shareServcie/ShareService.java" />
-        <option value="$PROJECT_DIR$/api-web/test/main/java/ProxyTest.java" />
-        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/LhbResult.java" />
-        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/LhbVo.java" />
-        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/Lhb.java" />
-        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/LhbResponse.java" />
-        <option value="$PROJECT_DIR$/api-service/src/main/resources/mapper/LhbMapper.xml" />
+        <option value="$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/ShareFollow.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/resources/mapper/ShareFollowMapper.xml" />
+        <option value="$PROJECT_DIR$/api-web/test/main/java/ScheduleTest.java" />
         <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/job/QuartzJob.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/job/SharePriceAlarmSchedule.java" />
+        <option value="$PROJECT_DIR$/api-service/src/main/java/com/api/service/daylyService/DaylyService.java" />
       </list>
     </option>
   </component>
@@ -416,70 +405,8 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="api-domain" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="api-domain" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Plugins" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="api-dao" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="api-dao" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Plugins" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
           <option name="myItemId" value="api" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="api" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Plugins" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -502,11 +429,12 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="2" />
-    <option name="width" value="1934" />
-    <option name="height" value="1036" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
+  <component name="ProjectId" id="1yJLDg4hUYPBB2YFOkTzgYTa9Zy" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -595,9 +523,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -638,179 +566,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -847,124 +603,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api-service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api-service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api-service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="job" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -992,133 +630,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="api-domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="api-dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api-dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api-dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="share" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1126,41 +638,47 @@
       </pane>
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="shareser&#9;FILE&#9;file://F:/work/api/api-service/src/main/java/com/api/service/shareServcie/ShareService.java&#10;shares&#9;FILE&#9;file://F:/work/api/api-service/src/main/java/com/api/service/shareServcie/ShareService.java&#10;shareca&#9;FILE&#9;file://F:/work/api/api-web/src/main/java/com/api/dao/mapper/ShareCategoryMapper.xml&#10;ShareCategoryMapper&#9;FILE&#9;file://F:/work/api/api-dao/src/main/java/com/api/dao/mapper/ShareCategoryMapper.java&#10;enu&#9;PSI&#9;JAVA://com.api.util.ShareExcelEnum&#10;da&#9;FILE&#9;file://F:/work/api/api-service/src/main/java/com/api/service/daylyService/DaylyService.java&#10;consta&#9;PSI&#9;JAVA://com.sun.corba.se.impl.orbutil.closure.Constant&#10;util&#9;FILE&#9;file://F:/work/api/api-service/src/main/java/com/api/util/DateUtil.java&#10;ResponseUtil&#9;null&#9;null&#10;res&#9;FILE&#9;file://F:/work/api/api-domain/src/main/java/com/api/domain/snowResult/ShareResponse.java&#10;定时任务执行中&#9;null&#9;null&#10;enum&#9;PSI&#9;JAVA://com.api.util.SharePreEnum&#10;gzf&#9;FILE&#9;file://F:/work/api/api-web/src/main/java/com/api/dao/mapper/GzFollow.java&#10;dayfo&#9;PSI&#9;JAVA://com.api.domain.bean.Dayfollow&#10;dayf&#9;FILE&#9;file://F:/work/api/api-service/src/main/java/com/api/service/DayfollowService.java&#10;date&#9;FILE&#9;file://F:/work/api/api-service/src/main/java/com/api/util/DateUtil.java&#10;dateu&#9;FILE&#9;file://F:/work/api/api-service/src/main/java/com/api/util/DateUtil.java&#10;threadlocal&#9;PSI&#9;JAVA://java.lang.ThreadLocal&#10;test&#9;FILE&#9;file://F:/work/api/api-web/src/main/java/com/api/controller/Test.java&#10;send&#9;FILE&#9;jar://C:/Users/李显琪/.m2/repository/org/apache/kafka/kafka-clients/1.0.0/kafka-clients-1.0.0.jar!/org/apache/kafka/clients/producer/internals/Sender.class&#10;HashEntry&#9;PSI&#9;JAVA://org.hibernate.validator.internal.util.ConcurrentReferenceHashMap.HashEntry&#10;segmen&#9;PSI&#9;JAVA://java.util.concurrent.ConcurrentHashMap.Segment&#10;lhb&#9;FILE&#9;file://F:/work/api/api-domain/src/main/java/com/api/domain/LhbInfo.java&#10;lhbs&#9;FILE&#9;file://F:/work/api/api-service/src/main/java/com/api/service/LhbService.java&#10;Lhb&#9;FILE&#9;file://F:/work/api/api-domain/src/main/java/com/api/domain/Lhb.java&#10;share&#9;FILE&#9;file://F:/work/api/api-service/src/main/resources/mapper/ShareMapper.xml&#10;lh&#9;PSI&#9;JAVA://com.api.dao.mapper.Lhb&#10;task&#9;PSI&#9;JAVA://com.sun.javafx.tk.Toolkit.Task&#10;DayfollowMapper&#9;FILE&#9;file://F:/work/api/api-dao/src/main/java/com/api/dao/mapper/DayfollowMapper.java&#10;ShareMapper&#9;FILE&#9;file://F:/work/api/api-web/src/main/java/com/api/dao/mapper/ShareMapper.xml&#10;person&#9;FILE&#9;file://F:/work/api/api-web/src/main/java/com/api/dao/mapper/PersonMapper.xml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/api-web/test/main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../code/x_springboot-inteface-generatorper-master" />
-    <property name="SearchEverywhereHistoryKey" value="Lhb&#9;FILE&#9;file://F:/work/api/api-domain/src/main/java/com/api/domain/Lhb.java&#10;share&#9;FILE&#9;file://F:/work/api/api-service/src/main/resources/mapper/ShareMapper.xml&#10;lh&#9;PSI&#9;JAVA://com.api.dao.mapper.Lhb&#10;task&#9;PSI&#9;JAVA://com.sun.javafx.tk.Toolkit.Task&#10;DayfollowMapper&#9;FILE&#9;file://F:/work/api/api-dao/src/main/java/com/api/dao/mapper/DayfollowMapper.java&#10;ShareMapper&#9;FILE&#9;file://F:/work/api/api-web/src/main/java/com/api/dao/mapper/ShareMapper.xml&#10;person&#9;FILE&#9;file://F:/work/api/api-web/src/main/java/com/api/dao/mapper/PersonMapper.xml" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/api-web/test/main" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.api.controller" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.api.dao.mapper" />
-      <recent name="com.api.domain" />
-      <recent name="com.api.domain.bean" />
-      <recent name="main" />
-      <recent name="main.com.api.controller" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\work\api\api-service\src\main\resources\mapper" />
-      <recent name="F:\work\api\api-dao\src\main\java\com\api\dao\mapper" />
-      <recent name="F:\work\api\api-web\test" />
-      <recent name="F:\work\api\api-service\src\main" />
-      <recent name="F:\work\api\api-web\src\main\resources\mapper" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\work\api\api-web" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\work\api\api-web" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.api.domain" />
+      <recent name="com.api.dao.mapper" />
+      <recent name="com.api.service.rule" />
+      <recent name="com.api.domain.bean" />
+      <recent name="main" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\work\api\api-service\src\main\resources\mapper" />
+      <recent name="F:\work\api\api-dao\src\main\java\com\api\dao\mapper" />
+      <recent name="F:\work\api\api-domain\src\main\java\com\api\domain" />
+      <recent name="F:\work\api\api-web\test" />
+      <recent name="F:\work\api\api-service\src\main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1175,8 +693,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestControllerTest.test1">
-    <configuration default="false" name="TestControllerTest.test (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.ApiApplication">
+    <configuration default="false" name="ShareFollowTest.calculateAvgPriceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="main.java.*" />
@@ -1187,7 +705,33 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="main.java" />
-      <option name="MAIN_CLASS_NAME" value="main.java.TestControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="main.java.ShareFollowTest" />
+      <option name="METHOD_NAME" value="calculateAvgPriceTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ShareFollowTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="main.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="api-web" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="main.java" />
+      <option name="MAIN_CLASS_NAME" value="main.java.ShareFollowTest" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1202,7 +746,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="TestControllerTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="DingDingTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="main.java.*" />
@@ -1213,8 +757,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="main.java" />
-      <option name="MAIN_CLASS_NAME" value="main.java.TestControllerTest" />
-      <option name="METHOD_NAME" value="test1" />
+      <option name="MAIN_CLASS_NAME" value="main.java.DingDingTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1228,7 +772,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="TestControllerTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ScheduleTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="main.java.*" />
@@ -1239,8 +783,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="main.java" />
-      <option name="MAIN_CLASS_NAME" value="main.java.TestControllerTest" />
-      <option name="METHOD_NAME" value="test2" />
+      <option name="MAIN_CLASS_NAME" value="main.java.ScheduleTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1254,28 +798,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="Whole project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ProxyTest.LhbTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TestControllerTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="main.java.*" />
@@ -1286,8 +809,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="main.java" />
-      <option name="MAIN_CLASS_NAME" value="main.java.ProxyTest" />
-      <option name="METHOD_NAME" value="LhbTest" />
+      <option name="MAIN_CLASS_NAME" value="main.java.TestControllerTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1719,25 +1242,26 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.ApiApplication" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TestControllerTest.test (2)" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TestControllerTest.test1" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TestControllerTest.test2" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.Whole project" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.ProxyTest.LhbTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ShareFollowTest.calculateAvgPriceTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ShareFollowTest.test" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.DingDingTest.test" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ScheduleTest.test" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.TestControllerTest.test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestControllerTest.test1" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ProxyTest.LhbTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestControllerTest.test (2)" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.Whole project" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestControllerTest.test2" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestControllerTest.test" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ScheduleTest.test" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ShareFollowTest.test" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.DingDingTest.test" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ShareFollowTest.calculateAvgPriceTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -1768,83 +1292,177 @@
       <workItem from="1585466098841" duration="180000" />
       <workItem from="1593610129514" duration="354000" />
       <workItem from="1593701555115" duration="9777000" />
-      <workItem from="1594043547694" duration="774000" />
+      <workItem from="1594043547694" duration="5692000" />
+      <workItem from="1594732194623" duration="1148000" />
+      <workItem from="1595427346653" duration="502000" />
+      <workItem from="1595600517910" duration="4372000" />
+      <workItem from="1596203530917" duration="6500000" />
+      <workItem from="1596942031309" duration="8446000" />
+      <workItem from="1597151860827" duration="638000" />
+      <workItem from="1597238527177" duration="5049000" />
+      <workItem from="1597660581226" duration="3880000" />
+      <workItem from="1598017346359" duration="286000" />
+      <workItem from="1598360886648" duration="464000" />
+      <workItem from="1598442815724" duration="2491000" />
+      <workItem from="1598666086107" duration="15664000" />
+      <workItem from="1599891618359" duration="198000" />
+      <workItem from="1599992026408" duration="14910000" />
+      <workItem from="1601015329200" duration="3681000" />
+      <workItem from="1601208106800" duration="2555000" />
+      <workItem from="1601258176989" duration="10590000" />
+      <workItem from="1601516530553" duration="51831000" />
+      <workItem from="1602300105548" duration="653000" />
+      <workItem from="1602333973352" duration="789000" />
+      <workItem from="1602477012726" duration="8810000" />
+      <workItem from="1604579686097" duration="545000" />
+      <workItem from="1604668393522" duration="118000" />
+      <workItem from="1604921624909" duration="3081000" />
+      <workItem from="1608370006238" duration="4235000" />
+      <workItem from="1608442006076" duration="3804000" />
+      <workItem from="1608552760468" duration="2685000" />
+      <workItem from="1609240485664" duration="19793000" />
+      <workItem from="1612181494901" duration="2643000" />
+      <workItem from="1612782704168" duration="140000" />
+      <workItem from="1613094377333" duration="17553000" />
+      <workItem from="1613647719211" duration="1847000" />
+      <workItem from="1614164892709" duration="366000" />
+      <workItem from="1614600617382" duration="2452000" />
+      <workItem from="1615379620816" duration="94000" />
+      <workItem from="1615477149439" duration="151000" />
+      <workItem from="1615806268260" duration="2632000" />
+      <workItem from="1616415217372" duration="416000" />
+      <workItem from="1617015914343" duration="518000" />
+      <workItem from="1617621200177" duration="728000" />
+      <workItem from="1622253743649" duration="4368000" />
+      <workItem from="1622259532981" duration="2859000" />
+      <workItem from="1624711268214" duration="2486000" />
+      <workItem from="1625145258980" duration="1685000" />
+      <workItem from="1625828178364" duration="1163000" />
+      <workItem from="1626703999236" duration="33000" />
+      <workItem from="1626867369783" duration="2518000" />
+      <workItem from="1627902750845" duration="6500000" />
+      <workItem from="1629199020245" duration="1287000" />
+      <workItem from="1629370813456" duration="14637000" />
+      <workItem from="1630930642078" duration="4002000" />
+      <workItem from="1631616748902" duration="7630000" />
+      <workItem from="1631964634685" duration="16000" />
+      <workItem from="1631965359709" duration="33000" />
+      <workItem from="1631965422928" duration="4000" />
+      <workItem from="1632313633870" duration="3449000" />
+      <workItem from="1632999309493" duration="23030000" />
+      <workItem from="1633848430399" duration="49000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProxyTest_LhbTest - 2020.07.05 at 19h 55m 08s.xml">
-      <configuration name="ProxyTest.LhbTest" configurationId="JUnit" />
+    <history-entry file="ScheduleTest_test - 2021.10.07 at 21h 33m 55s.xml">
+      <configuration name="ScheduleTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProxyTest_LhbTest - 2020.07.05 at 19h 57m 00s.xml">
-      <configuration name="ProxyTest.LhbTest" configurationId="JUnit" />
+    <history-entry file="ScheduleTest_test - 2021.10.07 at 21h 36m 28s.xml">
+      <configuration name="ScheduleTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProxyTest_LhbTest - 2020.07.05 at 20h 07m 33s.xml">
-      <configuration name="ProxyTest.LhbTest" configurationId="JUnit" />
+    <history-entry file="ShareFollowTest_test - 2021.10.07 at 14h 16m 58s.xml">
+      <configuration name="ShareFollowTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProxyTest_LhbTest - 2020.07.05 at 20h 13m 11s.xml">
-      <configuration name="ProxyTest.LhbTest" configurationId="JUnit" />
+    <history-entry file="TestControllerTest_test - 2021.10.08 at 21h 14m 24s.xml">
+      <configuration name="TestControllerTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProxyTest_LhbTest - 2020.07.05 at 20h 14m 37s.xml">
-      <configuration name="ProxyTest.LhbTest" configurationId="JUnit" />
+    <history-entry file="TestControllerTest_test - 2021.10.08 at 21h 18m 26s.xml">
+      <configuration name="TestControllerTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProxyTest_LhbTest - 2020.07.05 at 20h 17m 41s.xml">
-      <configuration name="ProxyTest.LhbTest" configurationId="JUnit" />
+    <history-entry file="TestControllerTest_test - 2021.10.08 at 21h 18m 49s.xml">
+      <configuration name="TestControllerTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProxyTest_LhbTest - 2020.07.05 at 20h 19m 08s.xml">
-      <configuration name="ProxyTest.LhbTest" configurationId="JUnit" />
+    <history-entry file="TestControllerTest_test - 2021.10.08 at 21h 19m 55s.xml">
+      <configuration name="TestControllerTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProxyTest_LhbTest - 2020.07.06 at 21h 56m 15s.xml">
-      <configuration name="ProxyTest.LhbTest" configurationId="JUnit" />
+    <history-entry file="TestControllerTest_test - 2021.10.08 at 21h 25m 23s.xml">
+      <configuration name="TestControllerTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestControllerTest_test1 - 2020.07.06 at 21h 54m 11s.xml">
-      <configuration name="TestControllerTest.test1" configurationId="JUnit" />
+    <history-entry file="TestControllerTest_test - 2021.10.08 at 21h 27m 32s.xml">
+      <configuration name="TestControllerTest.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestControllerTest_test_(2) - 2020.07.06 at 21h 55m 51s.xml">
-      <configuration name="TestControllerTest.test (2)" configurationId="JUnit" />
+    <history-entry file="TestControllerTest_test - 2021.10.08 at 21h 28m 02s.xml">
+      <configuration name="TestControllerTest.test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166271000" />
+    <option name="totallyTimeSpent" value="459854000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="2" width="1934" height="1036" extended-state="0" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="1" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25614974" sideWeight="0.49589685" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973261" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7550535" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52403283" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4548652" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29964328" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24062166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29308325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2342246" sideWeight="0.4829932" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27165776" sideWeight="0.5170068" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282532" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994652" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25614974" sideWeight="0.49589685" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973261" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8171161" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282532" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4548652" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29308325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20320855" sideWeight="0.4829932" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994652" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282532" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27165776" sideWeight="0.5170068" order="8" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1858,7 +1476,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="78" />
+      <option name="time" value="168" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1867,317 +1485,348 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api-web/test/main/java/CacheTest.java" />
-    <entry file="file://$PROJECT_DIR$/api-web/catalina.home_IS_UNDEFINED/logs/api-9038_2020-02-05-0.log">
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-test/5.0.7.RELEASE/spring-test-5.0.7.RELEASE.jar!/org/springframework/test/context/junit4/statements/RunAfterTestMethodCallbacks.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        <state relative-caret-position="165">
+          <caret line="26" column="45" lean-forward="false" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-web/pom.xml">
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-test/5.0.7.RELEASE/spring-test-5.0.7.RELEASE.jar!/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="43" column="42" lean-forward="false" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+        <state relative-caret-position="165">
+          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="jar://$USER_HOME$/.m2/repository/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+        <state relative-caret-position="83">
+          <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/dao/mapper/ShareMapper.xml" />
-    <entry file="jar://F:/jdk1.8/src.zip!/java/io/PrintStream.java">
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-test/5.0.7.RELEASE/spring-test-5.0.7.RELEASE.jar!/org/springframework/test/context/junit4/statements/RunBeforeTestClassCallbacks.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="819" column="16" lean-forward="false" selection-start-line="819" selection-start-column="16" selection-end-line="819" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/securitiesCodeService/SecuritiesCodeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/jdk1.8/src.zip!/java/util/function/Function.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-web/test/com/api/controller/TestControllerTest.java" />
-    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/dao/mapper/DayfollowMapper.java" />
-    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/dao/mapper/DayfollowMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/dao/mapper/Dayfollow.java" />
-    <entry file="file://$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/bean/Dayfollow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-232">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/DayfollowMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-web/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-service/src/main/resources/mapper/DayfollowMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3480">
-          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-          <folding>
-            <marker date="1581045385520" expanded="true" signature="975:1079" ph="select from dayFollow" />
-            <marker date="1581045385520" expanded="true" signature="1166:1225" ph="delete from " />
-            <marker date="1581045385520" expanded="true" signature="1312:1621" ph="insert into dayFollow... " />
-            <marker date="1581045385520" expanded="true" signature="3006:3650" ph="update dayFo... " />
-            <marker date="1581045385520" expanded="true" signature="3749:4067" ph="update dayFo... " />
-            <marker date="1581045385520" expanded="true" signature="4164:4216" ph="select * fro... dayFollow" />
-            <marker date="1581045385520" expanded="true" signature="4164:4249" ph="select * fro... dayFollow" />
-            <marker date="1581045385520" expanded="true" signature="4328:4432" ph="update `dayF... " />
-            <marker date="1581045385520" expanded="true" signature="4431:4432" ph="select * fro... dayFollow" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
+        <state relative-caret-position="245">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/DayfollowService.java">
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-test/5.0.7.RELEASE/spring-test-5.0.7.RELEASE.jar!/org/springframework/test/context/junit4/statements/SpringRepeat.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="31" column="20" lean-forward="false" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/controller/DaylyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/securityCode/SecurityCodeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/jdk1.8/javafx-src.zip!/com/sun/javafx/tk/Toolkit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="728" column="29" lean-forward="true" selection-start-line="728" selection-start-column="29" selection-end-line="728" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/share/Share.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1827">
-          <caret line="77" column="18" lean-forward="false" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
+        <state relative-caret-position="191">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="282">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/daylyService/DaylyService.java">
+    <entry file="jar://$USER_HOME$/.m2/repository/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1363">
-          <caret line="61" column="51" lean-forward="false" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4553#4554#0" expanded="false" />
-            <element signature="e#4595#4596#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="141">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/dao/mapper/LhbMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/LhbMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/dao/mapper/LhbMapper.java" />
-    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/dao/mapper/Lhb.java" />
+    <entry file="jar://$USER_HOME$/.m2/repository/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/statements/InvokeMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api-web/src/main/resources/generatorConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-          <folding />
+        <state relative-caret-position="305">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/securityCode/SecurityCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-service/src/main/resources/mapper/ShareMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="166" column="36" lean-forward="true" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/share/ShareMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/ProxyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-web/init.sql">
+    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/dao/mapper/ShareCategoryRank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
-          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/proxy/XueqiuProxyServe.java">
+    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/dao/mapper/ShareFollowMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/dao/mapper/ShareFollowMapper.java" />
+    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/dao/mapper/ShareCategoryRecordMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1632413336611" expanded="true" signature="1581:1697" ph="select from share_category_record" />
+            <marker date="1632413336611" expanded="true" signature="1781:1851" ph="delete from " />
+            <marker date="1632413336611" expanded="true" signature="1947:2593" ph="insert into share_category_record... " />
+            <marker date="1632413336611" expanded="true" signature="5083:6426" ph="update share... " />
+            <marker date="1632413336611" expanded="true" signature="6534:7208" ph="update share... " />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/SnowResult.java">
+    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/dao/mapper/ShareFollow.java" />
+    <entry file="file://$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/ShareCategoryRankMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-web/test/main/java/ShareCategoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
-          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/ShareResponse.java">
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-core/5.0.7.RELEASE/spring-core-5.0.7.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="12" selection-end-column="29" />
+        <state relative-caret-position="113">
+          <caret line="105" column="50" lean-forward="true" selection-start-line="105" selection-start-column="50" selection-end-line="105" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/LhbVo.java">
+    <entry file="file://$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/ShareFollowMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#726#727#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#908#909#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
-            <element signature="e#970#971#0" expanded="true" />
-            <element signature="e#1014#1015#0" expanded="true" />
-            <element signature="e#1050#1051#0" expanded="true" />
-            <element signature="e#1083#1084#0" expanded="true" />
-            <element signature="e#1112#1113#0" expanded="true" />
-            <element signature="e#1156#1157#0" expanded="true" />
-            <element signature="e#1192#1193#0" expanded="true" />
-            <element signature="e#1233#1234#0" expanded="true" />
-            <element signature="e#1264#1265#0" expanded="true" />
-            <element signature="e#1318#1319#0" expanded="true" />
-            <element signature="e#1358#1359#0" expanded="true" />
-            <element signature="e#1396#1397#0" expanded="true" />
-            <element signature="e#1430#1431#0" expanded="true" />
-            <element signature="e#1484#1485#0" expanded="true" />
-            <element signature="e#1530#1531#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/LhbResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#246#247#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#484#485#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/snowResult/LhbResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="e#235#236#0" expanded="true" />
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="497">
+          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar!/org/springframework/web/client/RestTemplate.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="425" column="0" lean-forward="false" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
+        <state relative-caret-position="275">
+          <caret line="223" column="15" lean-forward="false" selection-start-line="223" selection-start-column="15" selection-end-line="223" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar!/org/springframework/web/client/RestOperations.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="58" column="26" lean-forward="false" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/com/alibaba/fastjson/1.2.28/fastjson-1.2.28.jar!/com/alibaba/fastjson/JSON.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="64" column="25" lean-forward="false" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar!/org/springframework/http/ResponseEntity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar!/org/springframework/http/HttpEntity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar!/org/springframework/http/MediaType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="36" column="34" lean-forward="false" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/DingMsg/DingBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-web/test/main/java/ShareFollowTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/ProxyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-service/src/main/resources/mapper/ShareMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="229" column="0" lean-forward="true" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+          <folding>
+            <marker date="1633604741698" expanded="true" signature="1346:1457" ph="select from share" />
+            <marker date="1633604741698" expanded="true" signature="1547:1602" ph="delete from " />
+            <marker date="1633604741698" expanded="true" signature="1687:2175" ph="insert into share... " />
+            <marker date="1633604741698" expanded="true" signature="4599:5825" ph="update share... " />
+            <marker date="1633604741698" expanded="true" signature="5924:6433" ph="update share... " />
+            <marker date="1633604741698" expanded="true" signature="7286:7385" ph="select * fro... share" />
+            <marker date="1633604741698" expanded="true" signature="7456:7502" ph="select * fro... share" />
+            <marker date="1633604741698" expanded="true" signature="7602:7644" ph="select * fro... share" />
+            <marker date="1633604741698" expanded="true" signature="7749:7830" ph="SELECT * FRO... share" />
+            <marker date="1633604741698" expanded="true" signature="7905:8037" ph="SELECT SUM(t... *" />
+            <marker date="1633604741698" expanded="true" signature="7938:8034" ph="select * FRO... share" />
+            <marker date="1633604741698" expanded="true" signature="8160:8334" ph="SELECT temp.... temp" />
+            <marker date="1633604741698" expanded="true" signature="8199:8281" ph="SELECT date " />
+            <marker date="1633604741698" expanded="true" signature="8444:8586" ph="select name,... " />
+            <marker date="1633604741698" expanded="true" signature="8701:8957" ph="select name,... " />
+            <marker date="1633604741698" expanded="true" signature="8726:8912" ph="SELECT symbo... share" />
+            <marker date="1633604741698" expanded="true" signature="9061:9258" ph="SELECT sum(T... " />
+            <marker date="1633604741698" expanded="true" signature="9345:9483" ph="select * FRO... share" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/share/ShareMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="44" column="35" lean-forward="true" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/shareServcie/ShareService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="38" column="3" lean-forward="false" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/ShareFollow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-service/src/main/resources/mapper/ShareFollowMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="67" lean-forward="true" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
+          <folding>
+            <marker date="1633610698992" expanded="true" signature="1245:1353" ph="select from share_follow" />
+            <marker date="1633610698992" expanded="true" signature="1439:1501" ph="delete from " />
+            <marker date="1633610698992" expanded="true" signature="1584:2046" ph="insert into share_follow... " />
+            <marker date="1633610698992" expanded="true" signature="3945:4919" ph="update share... " />
+            <marker date="1633610698992" expanded="true" signature="5014:5498" ph="update share... " />
+            <marker date="1633610698992" expanded="true" signature="5571:5640" ph="select from share_follow" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/jdk1.8/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="1924" column="18" lean-forward="false" selection-start-line="1924" selection-start-column="18" selection-end-line="1924" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-web/test/main/java/DingDingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/job/QuartzJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1914">
+          <caret line="87" column="12" lean-forward="false" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-web/test/main/java/ScheduleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-web/init.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="9" column="57" lean-forward="true" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/controller/Name.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/controller/ShareController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/controller/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-web/src/main/java/com/api/controller/DaylyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/ShareFollowService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1537">
+          <caret line="60" column="8" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1720#1721#0" expanded="true" />
+            <element signature="e#1775#1776#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/msg/DingDingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/job/SharePriceAlarmSchedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2175">
+          <caret line="86" column="5" lean-forward="false" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2189,84 +1838,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/LhbService.java">
+    <entry file="jar://F:/jdk1.8/src.zip!/java/util/function/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="22" column="1" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-dao/src/main/java/com/api/dao/mapper/LhbMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        <state relative-caret-position="725">
+          <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/shareServcie/ShareService.java">
+    <entry file="file://$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/share/Share.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="47" column="23" lean-forward="false" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
+        <state relative-caret-position="1856">
+          <caret line="76" column="18" lean-forward="false" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1533#1534#0" expanded="true" />
-            <element signature="e#1588#1589#0" expanded="true" />
+            <element signature="e#1494#1495#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-web/test/main/java/ProxyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/job/QuartzJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="44" column="38" lean-forward="true" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-domain/src/main/java/com/api/domain/Lhb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api-web/test/main/java/TestControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-          <folding>
-            <element signature="e#882#883#0" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1218">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-service/src/main/resources/mapper/LhbMapper.xml">
+    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/proxy/XueqiuProxyServe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="79" column="43" lean-forward="false" selection-start-line="79" selection-start-column="43" selection-end-line="79" selection-end-column="43" />
-          <folding>
-            <marker date="1593951332640" expanded="true" signature="889:1240" ph="insert into lhb... " />
-          </folding>
+        <state relative-caret-position="841">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-service/src/main/java/com/api/service/daylyService/DaylyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="36" column="7" lean-forward="false" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
