@@ -243,4 +243,11 @@
         WHERE symbol = #{symbol}
         ORDER BY date DESC LIMIT #{limitDay}) T1;
     </select>
+
+
+    <select id="getLowCurrentLimitDay" parameterType="Object" resultType="com.api.domain.share.Share">
+      SELECT  <include refid="Base_Column_List"/>  from
+        (SELECT  <include refid="Base_Column_List"/> FROM share where symbol=#{symbol} ORDER BY date DESC limit  #{limitDay}) T1
+        ORDER BY current asc limit 1;
+    </select>
 </mapper>

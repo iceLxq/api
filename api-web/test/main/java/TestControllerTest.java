@@ -55,8 +55,9 @@ public class TestControllerTest {
 
     @Test
     public void test(){
-        daylyService.cacheDayFollow();
-        daylyService.jyyMethod();
+//        daylyService.cacheDayFollow();
+//        daylyService.jyyMethod();
+        daylyService.jyyMethodUpdate();
         //daylyService.cacheDayFollow();
 //        daylyService.cache60Breach();
     }

@@ -23,6 +23,11 @@ public class DingDingService {
         restTemplate.postForEntity(dingUrl, param, String.class);
     }
 
+
+    public void sendDingMsg(JSONObject param) {
+        restTemplate.postForEntity(dingUrl, param, String.class);
+    }
+
     private JSONObject getMsg(int dayNum, String name) {
         DingBody msg = new DingBody();
         String content = "警告：" + name + " 以达到 " + dayNum + " 日线 ";

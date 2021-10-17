@@ -45,4 +45,6 @@ public interface ShareMapper {
     List<Share> getLastShareList();
 
     Long calculateAvgAmount(@Param("limitDay") int limitDay, @Param("symbol") String symbol);
+
+    Share getLowCurrentLimitDay(@Param("limitDay") int limitDay, @Param("symbol") String symbol);
 }

@@ -1,9 +1,13 @@
 package com.api.service.daylyService;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.api.domain.DingMsg.DingBody;
 import com.api.domain.bean.Dayfollow;
 import com.api.domain.share.Share;
 import com.api.proxy.XueqiuProxyServe;
 import com.api.service.DayfollowService;
+import com.api.service.msg.DingDingService;
 import com.api.service.shareServcie.ShareService;
 import com.api.util.DateUtil;
 import org.slf4j.Logger;
@@ -11,11 +15,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * Created by 李显琪 on 2020/2/3.
@@ -31,6 +33,8 @@ public class DaylyService {
     private XueqiuProxyServe xueqiuProxyServe;
     @Autowired
     private DayfollowService dayfollowService;
+    @Autowired
+    private DingDingService dingDingService;
 
 
     /**
@@ -163,20 +167,20 @@ public class DaylyService {
         for (String key : keySet) {
             Share share = shareDate1FilterMap.get(key);
             Share share10 = shareDate10Map.get(key);
-            if (null == share10){
+            if (null == share10) {
                 continue;
             }
             //2：最近10个交易日幅度大于30%
             if ((share.getCurrent() - share10.getCurrent()) / share10.getCurrent() > 0.3) {
                 Share share20 = shareDate20Map.get(key);
-                if (null == share20){
+                if (null == share20) {
                     continue;
                 }
                 Long avgAmount = shareService.calculateAvgAmount(20, share20.getSymbol());
                 share.setAmount(avgAmount);
                 filterOut20RuleList.add(share);
-               // 3: 近20个日成交额日均大于12亿
-                if (avgAmount > 1200000000){
+                // 3: 近20个日成交额日均大于12亿
+                if (avgAmount > 1200000000) {
                     filterList.add(share);
                 }
             }
@@ -184,13 +188,80 @@ public class DaylyService {
 
         System.out.println("-----------without 20 rule -----------");
         filterOut20RuleList.forEach(share -> System.out.println(
-                share.getName() +" " + share.getSymbol() +" avgPrice = "+ share.getAmount()
+                share.getName() + " " + share.getSymbol() + " avgPrice = " + share.getAmount()
         ));
 
         System.out.println("----------------------");
         filterList.forEach(share -> System.out.println(
-                share.getName() +" " + share.getSymbol() +" avgPrice = "+ share.getAmount()
+                share.getName() + " " + share.getSymbol() + " avgPrice = " + share.getAmount()
         ));
+    }
+
+    /**
+     * 改为：
+     * 1：前一个成交额大于10亿
+     * 2：最近10个交易日最低（lowDay）的那天到今天幅度大于30%
+     * 3: lowDay到今天成交额日均大于12亿
+     * 4：今日涨幅小于11%
+     * 5：现价小于90（更多人参与）
+     * 6：非科创， 非st
+     */
+
+    public void jyyMethodUpdate() {
+        List<Share> shareLimitByDate = shareService.getShareLimitByDate("002714", 21);
+        List<Share> shareByDate1 = shareService.getShareByDate(shareLimitByDate.get(0).getDate());
+        Map<String, Share> shareDate1FilterMap = new HashMap<>();
+        shareByDate1.stream().forEach(share -> {
+            if (!share.getSymbol().startsWith("688")
+                    && !share.getName().startsWith("*ST")
+                    && share.getPercent() != null
+                    && share.getPercent() < 11
+                    && share.getAmount() != null
+                    && share.getAmount() > 1000000000
+                    && share.getCurrent() < 90) {
+                shareDate1FilterMap.put(share.getSymbol(), share);
+            }
+        });
+        Set<String> keySet = shareDate1FilterMap.keySet();
+        List<Share> filterOut20RuleList = new ArrayList<>();
+        List<Share> filterList = new ArrayList<>();
+        for (String key : keySet) {
+            Share share = shareDate1FilterMap.get(key);
+            //2：最近10个交易日最低点幅度大于30%
+            Share lowCurrentShare10 = shareService.getLowCurrentLimitDay(10, share.getSymbol());
+            if ((share.getCurrent() - lowCurrentShare10.getCurrent()) / lowCurrentShare10.getCurrent() > 0.3) {
+                Long avgAmount = shareService.calculateAvgAmount(10, share.getSymbol());
+                share.setAmount(avgAmount);
+                filterOut20RuleList.add(share);
+                // 3: 近20个日成交额日均大于12亿
+                if (avgAmount > 1200000000) {
+                    filterList.add(share);
+                }
+            }
+        }
+
+        System.out.println("-----------without 20 rule -----------");
+        filterOut20RuleList.forEach(share -> System.out.println(
+                share.getName() + " " + share.getSymbol() + " avgPrice = " + share.getAmount()
+        ));
+
+        System.out.println("----------------------");
+        filterList.forEach(share -> {
+                    dingDingService.sendDingMsg(buildDingMsg(share));
+                    System.out.println(
+                            share.getName() + " " + share.getSymbol() + " avgAmount = " + share.getAmount());
+
+                }
+        );
+    }
+
+    private JSONObject buildDingMsg(Share share) {
+        DingBody msg = new DingBody();
+        String content = "警告：" + share.getName() + " " + share.getSymbol() + " avgAmount = " + share.getAmount();
+        msg.setMsgtype("text");
+        msg.getText().setContent(content);
+        String jsonString = JSON.toJSONString(msg);
+        return JSONObject.parseObject(jsonString);
     }
 
 }
