@@ -234,4 +234,13 @@
             select date from share where symbol = '002714' ORDER BY date desc limit 1
         )
     </select>
+
+    <select id="calculateAvgAmount" parameterType="Object" resultType="long">
+        SELECT sum(T1.amount)/#{limitDay} amount
+        from (
+        SELECT amount
+        FROM share
+        WHERE symbol = #{symbol}
+        ORDER BY date DESC LIMIT #{limitDay}) T1;
+    </select>
 </mapper>

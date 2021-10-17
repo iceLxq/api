@@ -47,7 +47,7 @@ public class TestControllerTest {
      */
     @Test
 
-    public void testTotal(){
+    public void SyncData(){
         quartzJob.syncSecuritiesCode();
       //  daylyService.cacheDayFollow();
        // quartzJob.syncLHBData();
@@ -56,6 +56,7 @@ public class TestControllerTest {
     @Test
     public void test(){
         daylyService.cacheDayFollow();
+        daylyService.jyyMethod();
         //daylyService.cacheDayFollow();
 //        daylyService.cache60Breach();
     }

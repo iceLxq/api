@@ -130,4 +130,7 @@ public class ShareService {
     }
 
 
+    public Long calculateAvgAmount(int limitDay, String symbol) {
+        return shareMapper.calculateAvgAmount(limitDay, symbol);
+    }
 }

@@ -15,6 +15,7 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by 李显琪 on 2020/2/3.
@@ -72,7 +73,7 @@ public class DaylyService {
                     dayfollowList.add(dayfollow);
                 }
             } catch (Exception e) {
-                logger.info("cacheDayFollowException"  + daylyShare.getName());
+                logger.info("cacheDayFollowException" + daylyShare.getName());
             }
         });
         if (dayfollowList.isEmpty()) {
@@ -103,7 +104,7 @@ public class DaylyService {
     }
 
     private Share getYesterdayShare(List<Share> daylyShareInfoList) {
-        List<Share> shareList = shareService.getShareLimitByDate(daylyShareInfoList.get(10).getSymbol(),2);
+        List<Share> shareList = shareService.getShareLimitByDate(daylyShareInfoList.get(10).getSymbol(), 2);
         return shareList.get(1);
     }
 
@@ -113,6 +114,83 @@ public class DaylyService {
     public void cache60Breach() {
         System.out.println("cache60Breach");
 
+    }
+
+
+    /**
+     * 交易员
+     * 条件
+     * 1：前一个成交额大于10亿
+     * 2：最近10个交易日幅度大于30%
+     * 3: 近20个日成交额日均大于12亿
+     * 4：今日涨幅小于11%
+     * 5：现价小于90（更多人参与）
+     * 6：非科创， 非st
+     */
+
+    public void jyyMethod() {
+        List<Share> shareLimitByDate = shareService.getShareLimitByDate("002714", 21);
+        List<Share> shareByDate1 = shareService.getShareByDate(shareLimitByDate.get(0).getDate());
+        List<Share> shareByDate10 = shareService.getShareByDate(shareLimitByDate.get(10).getDate());
+        List<Share> shareByDate20 = shareService.getShareByDate(shareLimitByDate.get(20).getDate());
+        Map<String, Share> shareDate1FilterMap = new HashMap<>();
+        shareByDate1.stream().forEach(share -> {
+            if (!share.getSymbol().startsWith("688")
+                    && !share.getName().startsWith("*ST")
+                    && share.getPercent() != null
+                    && share.getPercent() < 11
+                    && share.getAmount() != null
+                    && share.getAmount() > 1000000000
+                    && share.getCurrent() < 90) {
+                shareDate1FilterMap.put(share.getSymbol(), share);
+            }
+        });
+        Map<String, Share> shareDate20Map = new HashMap<>();
+        shareByDate20.stream().forEach(share -> {
+            if (shareDate1FilterMap.containsKey(share.getSymbol())) {
+                shareDate20Map.put(share.getSymbol(), share);
+            }
+        });
+        Map<String, Share> shareDate10Map = new HashMap<>();
+        shareByDate10.stream().forEach(share -> {
+            if (shareDate1FilterMap.containsKey(share.getSymbol())) {
+                shareDate10Map.put(share.getSymbol(), share);
+            }
+        });
+        Set<String> keySet = shareDate1FilterMap.keySet();
+        List<Share> filterOut20RuleList = new ArrayList<>();
+        List<Share> filterList = new ArrayList<>();
+        for (String key : keySet) {
+            Share share = shareDate1FilterMap.get(key);
+            Share share10 = shareDate10Map.get(key);
+            if (null == share10){
+                continue;
+            }
+            //2：最近10个交易日幅度大于30%
+            if ((share.getCurrent() - share10.getCurrent()) / share10.getCurrent() > 0.3) {
+                Share share20 = shareDate20Map.get(key);
+                if (null == share20){
+                    continue;
+                }
+                Long avgAmount = shareService.calculateAvgAmount(20, share20.getSymbol());
+                share.setAmount(avgAmount);
+                filterOut20RuleList.add(share);
+               // 3: 近20个日成交额日均大于12亿
+                if (avgAmount > 1200000000){
+                    filterList.add(share);
+                }
+            }
+        }
+
+        System.out.println("-----------without 20 rule -----------");
+        filterOut20RuleList.forEach(share -> System.out.println(
+                share.getName() +" " + share.getSymbol() +" avgPrice = "+ share.getAmount()
+        ));
+
+        System.out.println("----------------------");
+        filterList.forEach(share -> System.out.println(
+                share.getName() +" " + share.getSymbol() +" avgPrice = "+ share.getAmount()
+        ));
     }
 
 }

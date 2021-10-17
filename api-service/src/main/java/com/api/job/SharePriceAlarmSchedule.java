@@ -68,9 +68,6 @@ public class SharePriceAlarmSchedule {
             case "3":
                 comparePrice(share.getCurrent(), shareFollow.getThree(), gt, share.getName(), 3);
                 break;
-            case "5":
-                comparePrice(share.getCurrent(), shareFollow.getFive(), gt, share.getName(), 5);
-                break;
             case "10":
                 comparePrice(share.getCurrent(), shareFollow.getTen(), gt, share.getName(), 10);
                 break;
