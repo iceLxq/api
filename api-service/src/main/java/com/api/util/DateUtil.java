@@ -1,5 +1,7 @@
 package com.api.util;
 
+import org.apache.commons.lang.time.DateUtils;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -9,7 +11,7 @@ import java.util.Date;
  */
 public class DateUtil {
 
-    public static Date getDay()  {
+    public static Date getDay() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date date = null;
         try {
@@ -20,7 +22,7 @@ public class DateUtil {
         return date;
     }
 
-    public static Date getDayByStr(String dateStr)  {
+    public static Date getDayByStr(String dateStr) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date date = null;
         try {
@@ -31,16 +33,31 @@ public class DateUtil {
         return date;
     }
 
-    public static String getDayStr()  {
+    public static String getDayStr() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String  date = null;
+        String dateStr = null;
         try {
-            date = sdf.format(new Date());
+            dateStr = sdf.format(new Date());
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return date;
+        return dateStr;
     }
 
+    public static String getDayStr(Date date) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String dateStr = null;
+        try {
+            dateStr = sdf.format(date);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return dateStr;
+    }
+
+
+    public static Date addDays(Date date, int day) {
+        return DateUtils.addDays(date, day);
+    }
 
 }

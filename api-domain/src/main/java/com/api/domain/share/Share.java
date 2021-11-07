@@ -150,4 +150,25 @@ public class Share {
     public void setDate(Date date) {
         this.date = date;
     }
+
+
+    @Override
+    public String toString() {
+        return "Share{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", symbol='" + symbol + '\'' +
+                ", symbolCode='" + symbolCode + '\'' +
+                ", current=" + current +
+                ", startPrice=" + startPrice +
+                ", percent=" + percent +
+                ", volume=" + volume +
+                ", amount=" + amount +
+                ", turnoverRate=" + turnoverRate +
+                ", marketCapital=" + marketCapital +
+                ", date=" + date +
+                ", turnover_rate=" + turnover_rate +
+                ", market_capital=" + market_capital +
+                '}';
+    }
 }

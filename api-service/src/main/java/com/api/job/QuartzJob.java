@@ -52,7 +52,7 @@ public class QuartzJob {
     @Scheduled(cron = "30 4 16 * * ?")
     public void syncSecuritiesCode() {
         List<Share> list = xueqiuProxyServe.getShareInfoList();
-        if (!checkExist(list.get(0)) && !checkExist(list.get(1))) { //休市
+        if (!isOpen(list)) { //休市
             return;
         }
         updateStartPrice(list);
@@ -73,11 +73,11 @@ public class QuartzJob {
             }
             retry++;
             try {
-                Thread.sleep(600000);
-            } catch (InterruptedException e1) {
+                Thread.sleep(60);
+                syncSecuritiesCode();
+            } catch (Exception e1) {
                 e1.printStackTrace();
             }
-            syncSecuritiesCode();
         }
     }
 
@@ -92,6 +92,13 @@ public class QuartzJob {
                 share.setStartPrice(endPriceMap.get(share.getSymbol()));
             }
         });
+    }
+
+    public Boolean isOpen(List<Share> list){
+        if (!list.isEmpty() && !checkExist(list.get(0)) && !checkExist(list.get(1))) { //休市
+            return true;
+        }
+        return false;
     }
 
     private Boolean checkExist(Share share) {

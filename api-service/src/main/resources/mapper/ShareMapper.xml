@@ -177,25 +177,33 @@
     </insert>
 
     <select id="getShareByRecord" parameterType="Object" resultMap="BaseResultMap">
-      select * from share
-    where symbol = #{symbol} and current = #{current}  and percent = #{percent}
-  </select>
+        select
+        <include refid="Base_Column_List"/>
+        from share
+        where symbol = #{symbol} and current = #{current} and percent = #{percent}
+    </select>
 
     <select id="getMaxId" resultMap="BaseResultMap">
-    select * from `share` order by id desc limit 1
-  </select>
+        select
+        <include refid="Base_Column_List"/>
+        from `share` order by id desc limit 1
+    </select>
 
     <select id="getShareByDate" parameterType="Object" resultMap="BaseResultMap">
-    select * from `share` where date = #{date}
-  </select>
+        select
+        <include refid="Base_Column_List"/>
+        from `share` where date = #{date}
+    </select>
 
     <select id="getShareLimitByDate" parameterType="Object" resultMap="BaseResultMap">
-    SELECT * FROM `share` where symbol=#{symbol} order by date desc limit #{limitDay};
-  </select>
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM `share` where symbol=#{symbol} order by date desc limit #{limitDay};
+    </select>
 
     <select id="getMaCurrentTotal" resultType="double">
     SELECT SUM(t.current)  from
-    (select * FROM share WHERE symbol = #{symbol} and date &lt; now()  ORDER BY date DESC LIMIT #{ma}) t;
+    (select currnet FROM share WHERE symbol = #{symbol} and date &lt; now()  ORDER BY date DESC LIMIT #{ma}) t;
   </select>
 
     <select id="getDateBeginRecord" parameterType="Object" resultType="com.api.domain.share.Share">
@@ -212,11 +220,13 @@
     </select>
 
     <select id="getSharePercentDayIncr" parameterType="Object" resultMap="BaseResultMap">
-        SELECT * FROM(
-          SELECT symbol, `name`,SUM(percent)/#{limitDay} percent FROM `share`
-          where  date > #{date} and left(name,1) != 'N' and left(symbol,3) != '688'
-          GROUP BY symbol , `name`) a
-        ORDER BY percent  desc  limit 100;
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM(
+        SELECT symbol, `name`,SUM(percent)/#{limitDay} percent FROM `share`
+        where date > #{date} and left(name,1) != 'N' and left(symbol,3) != '688'
+        GROUP BY symbol , `name`) a
+        ORDER BY percent desc limit 100;
     </select>
 
     <select id="calculateAvgPrice" parameterType="Object" resultType="double">
@@ -228,10 +238,12 @@
             ORDER BY date DESC LIMIT #{limitDay}) T1;
     </select>
 
-    <select id="getLastShareList"  resultMap="BaseResultMap">
-        select * FROM share where date =
+    <select id="getLastShareList" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        FROM share where date =
         (
-            select date from share where symbol = '002714' ORDER BY date desc limit 1
+        select date from share where symbol = '002714' ORDER BY date desc limit 1
         )
     </select>
 
@@ -246,8 +258,48 @@
 
 
     <select id="getLowCurrentLimitDay" parameterType="Object" resultType="com.api.domain.share.Share">
-      SELECT  <include refid="Base_Column_List"/>  from
-        (SELECT  <include refid="Base_Column_List"/> FROM share where symbol=#{symbol} ORDER BY date DESC limit  #{limitDay}) T1
+        SELECT
+        <include refid="Base_Column_List"/>
+        from
+        (SELECT
+        <include refid="Base_Column_List"/>
+        FROM share where symbol=#{symbol} ORDER BY date DESC limit #{limitDay}) T1
         ORDER BY current asc limit 1;
+    </select>
+
+    <select id="getHighCurrentLimitDay" parameterType="Object" resultType="com.api.domain.share.Share">
+        SELECT
+        <include refid="Base_Column_List"/>
+        from
+        (SELECT
+        <include refid="Base_Column_List"/>
+        FROM share where symbol=#{symbol} ORDER BY date DESC limit #{limitDay}) T1
+        ORDER BY current asc limit 1;
+    </select>
+
+    <select id="getShareListByDateList" parameterType="Object" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from share
+        where date in (
+        <foreach collection="list" item="item" index="index" separator=",">
+            #{item}
+        </foreach>)
+        and symbol = #{symbol}
+    </select>
+
+    <select id="getShareByPercent" parameterType="Object" resultMap="BaseResultMap">
+        select symbol, `name`,percent,date , amount FROM `share`
+        where  percent>7.0 and  date ="2021-11-05"
+          and left(name,1) != 'N' and left(symbol,3) != '688' and left(name,1) != 'C'
+        GROUP BY percent, symbol , `name`, amount;
+    </select>
+
+    <select id="getLowCurrentByDate" parameterType="Object" resultType="com.api.domain.share.Share">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM share
+        where symbol=#{symbol} and date &lt; #{dateEnd} and date &gt; #{dateBegin}
+        ORDER BY date DESC limit 1;
     </select>
 </mapper>
